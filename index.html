@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stoa Consulting · Asesor IA para el Comité de Dirección</title>
+<meta name="description" content="Asesor IA independiente para CEOs y comités de dirección de grandes empresas españolas. Estrategia, gobierno y casos de uso. Sin hype. Con criterio.">
+<meta name="author" content="Stoa Consulting S.L.">
+<meta name="theme-color" content="#08183A">
+<link rel="canonical" href="https://www.stoa.consulting/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2308183A'/%3E%3Ctext x='16' y='23' font-size='18' fill='%23D4B68E' text-anchor='middle' font-family='serif'%3E%E2%97%86%3C/text%3E%3C/svg%3E">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Stoa Consulting">
+<meta property="og:title" content="Stoa Consulting · Asesor IA para el Comité de Dirección">
+<meta property="og:description" content="Pensamiento sereno para decisiones complejas. Asesor IA independiente para Comités de Dirección de gran empresa española. Sin hype. Con criterio.">
+<meta property="og:url" content="https://www.stoa.consulting/">
+<meta property="og:image" content="https://www.stoa.consulting/assets/stoa_logo_navy.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Stoa Consulting · Asesor IA para el Comité de Dirección">
+<meta name="twitter:description" content="Pensamiento sereno para decisiones complejas. Estrategia, gobierno y casos de uso de IA para gran empresa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/stoa.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Stoa Consulting",
+  "legalName": "Stoa Consulting S.L.",
+  "description": "Asesor IA independiente para Comités de Dirección de gran empresa española. Estrategia, gobierno y casos de uso de inteligencia artificial.",
+  "url": "https://www.stoa.consulting/",
+  "email": "antelo@stoa.consulting",
+  "areaServed": "ES",
+  "slogan": "Pensamiento sereno para decisiones complejas",
+  "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES" }
+}
+</script>
+<style>
+:root {
+  --azul-stoa: #0F2E63;
+  --azul-profundo: #12284C;
+  --azul-noche: #08183A;
+  --crema: #F5F1E8;
+  --bronze: #B8945F;
+  --bronze-light: #D4B68E;
+  --gris-antracita: #54565A;
+  --gris-medio: #8B8E94;
+  --gris-claro: #D9DDE3;
+  --gris-niebla: #EEF1F5;
+  --blanco: #FFFFFF;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
+body {
+  font-family: var(--sans);
+  color: var(--azul-profundo);
+  background: var(--azul-noche);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ===================== SCENES BASE ===================== */
+.scene {
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.scene-inner {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: clamp(48px, 6vh, 80px) clamp(32px, 6vw, 100px);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scene-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.scene-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ===================== TYPOGRAPHY ===================== */
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--azul-stoa);
+  margin-bottom: 22px;
+  position: relative;
+  display: inline-block;
+}
+.eyebrow::after {
+  content: '';
+  display: block;
+  margin-top: 12px;
+  width: 64px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--azul-stoa) 0 26px, transparent 26px 38px, var(--azul-stoa) 38px 64px);
+}
+.eyebrow::before {
+  content: '◆';
+  position: absolute;
+  bottom: -5px;
+  left: 28px;
+  font-size: 7px;
+  color: var(--azul-stoa);
+  z-index: 2;
+}
+.scene-dark .eyebrow, .scene-noche .eyebrow {
+  color: var(--gris-claro);
+}
+.scene-dark .eyebrow::after, .scene-noche .eyebrow::after {
+  background: linear-gradient(90deg, var(--gris-claro) 0 26px, transparent 26px 38px, var(--gris-claro) 38px 64px);
+}
+.scene-dark .eyebrow::before, .scene-noche .eyebrow::before {
+  color: var(--gris-claro);
+}
+
+h1.display {
+  font-family: var(--serif);
+  font-size: clamp(40px, 5.5vw, 80px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+h1.display em {
+  font-style: italic;
+  color: var(--azul-stoa);
+}
+.scene-dark h1.display em, .scene-noche h1.display em, .scene-cover h1.display em {
+  color: var(--bronze-light);
+}
+
+h2.title {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.8vw, 48px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin-bottom: 18px;
+  max-width: 24ch;
+}
+h2.title em {
+  font-style: italic;
+  color: var(--azul-stoa);
+}
+.scene-dark h2.title em, .scene-noche h2.title em {
+  color: var(--bronze-light);
+}
+
+.lede, .body {
+  font-size: clamp(17px, 1.5vw, 22px);
+  line-height: 1.6;
+  color: var(--gris-antracita);
+  max-width: 60ch;
+  margin-bottom: 24px;
+}
+.scene-dark .lede, .scene-dark .body,
+.scene-noche .lede, .scene-noche .body { color: var(--gris-claro); }
+
+.slogan-italic {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(14px, 1.1vw, 17px);
+  color: var(--bronze);
+  margin-top: 14px;
+}
+.scene-dark .slogan-italic, .scene-noche .slogan-italic { color: var(--bronze-light); }
+
+/* ===================== BUTTONS ===================== */
+.btn {
+  display: inline-block;
+  padding: 16px 28px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: transparent;
+}
+.btn-primary {
+  background: var(--azul-stoa);
+  color: var(--blanco);
+}
+.btn-primary:hover {
+  background: var(--azul-profundo);
+  transform: translateY(-1px);
+}
+.btn-ghost {
+  color: var(--azul-stoa);
+  border: 1px solid var(--azul-stoa);
+}
+.btn-ghost:hover {
+  background: var(--azul-stoa);
+  color: var(--blanco);
+}
+.btn-bronze {
+  background: var(--bronze);
+  color: var(--azul-noche);
+}
+.btn-bronze:hover {
+  background: var(--bronze-light);
+}
+.btn-link-dark {
+  color: var(--gris-claro);
+  border-bottom: 1px solid var(--gris-claro);
+  padding: 8px 0;
+}
+.btn-link-dark:hover {
+  color: var(--blanco);
+}
+
+/* ===================== INDICATORS ===================== */
+.scene-num {
+  position: absolute;
+  top: clamp(20px, 3vh, 32px);
+  right: clamp(20px, 3vw, 40px);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--gris-medio);
+  z-index: 10;
+}
+.scene-dark .scene-num, .scene-noche .scene-num {
+  color: var(--gris-claro);
+  opacity: 0.4;
+}
+
+.side-nav {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+.side-nav a {
+  width: 18px;
+  height: 1px;
+  background: rgba(255,255,255,0.4);
+  display: block;
+  transition: width 0.3s, background 0.3s;
+}
+.side-nav a:hover, .side-nav a.active {
+  width: 36px;
+  background: var(--bronze-light);
+}
+
+/* ===================== SCENE 1 · TORRES MADRID ===================== */
+.scene-1 .scene-bg {
+  background: linear-gradient(180deg, #1F2A4A 0%, #2A3A5C 30%, #B8945F 75%, #D4B68E 100%);
+}
+.scene-1-towers {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1400px;
+  height: 70%;
+  z-index: 2;
+  pointer-events: none;
+}
+.tower-svg {
+  width: 100%;
+  height: 100%;
+}
+.scene-1 .scene-inner {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--blanco);
+}
+.cover-content {
+  position: relative;
+  z-index: 6;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cover-eyebrow {
+  font-family: var(--sans);
+  font-size: clamp(12px, 1.1vw, 15px);
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--bronze-light);
+  margin-bottom: 30px;
+}
+.cover-eyebrow::before { content: '◆  '; font-size: 9px; }
+.cover-content h1 {
+  font-family: var(--serif);
+  font-size: clamp(56px, 8vw, 128px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  color: var(--blanco);
+  margin-bottom: 26px;
+}
+.cover-content h1 em {
+  font-style: italic;
+  color: var(--bronze-light);
+}
+.cover-slogan {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(22px, 2.6vw, 38px);
+  line-height: 1.25;
+  color: var(--bronze-light);
+  margin-bottom: 44px;
+  max-width: 22ch;
+}
+.cover-cta-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+.cover-cta-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(16px, 1.5vw, 20px);
+  color: var(--gris-claro);
+}
+.cta-enter {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  border: 1px solid var(--bronze-light);
+  color: var(--bronze-light);
+  text-decoration: none;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.cta-enter:hover {
+  background: var(--bronze);
+  color: var(--azul-noche);
+  border-color: var(--bronze);
+}
+.cta-enter::after {
+  content: '↓';
+  font-size: 16px;
+  font-family: var(--serif);
+}
+
+/* ===================== SCENE 2 · HALL ===================== */
+.scene-2 {
+  background: linear-gradient(180deg, #08183A 0%, #12284C 60%, #1F3461 100%);
+  color: var(--blanco);
+}
+.scene-2-hall {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.scene-2 .scene-inner {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: clamp(36px, 6vh, 64px);
+  padding-top: calc(var(--header-h, 72px) + 6vh);
+}
+.scene-2 .top-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.25;
+  color: var(--blanco);
+  max-width: 24ch;
+  margin: 0 auto;
+}
+.scene-2 .elevator-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+.elevator-button {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--azul-profundo);
+  border: 2px solid var(--bronze);
+  color: var(--bronze-light);
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(184, 148, 95, 0.15), inset 0 0 10px rgba(0,0,0,0.3);
+}
+.elevator-button:hover {
+  background: var(--bronze);
+  color: var(--azul-noche);
+  box-shadow: 0 0 60px rgba(184, 148, 95, 0.5);
+}
+.elevator-meta {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(16px, 1.5vw, 20px);
+  color: var(--gris-claro);
+  opacity: 0.85;
+}
+.scene-2 .floor-label {
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--bronze-light);
+  font-weight: 600;
+}
+
+/* ===================== SCENE 3 · RECEPCIÓN ===================== */
+.scene-3 {
+  background: linear-gradient(135deg, #F5F1E8 0%, #E8DFC8 60%, #D4B68E 100%);
+}
+.scene-3 .scene-inner {
+  text-align: center;
+  align-items: center;
+}
+.scene-3-corridor {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ===================== SCENE 4 · DESPACHO ===================== */
+.scene-4 {
+  background: linear-gradient(135deg, #08183A 0%, #12284C 50%, #1F3461 100%);
+  color: var(--blanco);
+}
+.scene-4 .scene-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.scene-4-visual {
+  position: relative;
+  height: 70vh;
+  max-height: 600px;
+}
+.scene-4 .content-col {
+  max-width: 55ch;
+}
+.value-bullets {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.value-bullet {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 14px;
+  align-items: baseline;
+}
+.value-bullet .marker {
+  color: var(--bronze-light);
+  font-size: 14px;
+}
+.value-bullet h4 {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--bronze-light);
+  margin-bottom: 4px;
+}
+.value-bullet p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--gris-claro);
+}
+
+/* ===================== SCENE 5 · HUB ===================== */
+.scene-5 {
+  background: radial-gradient(ellipse at center top, #1F3461 0%, #12284C 50%, #08183A 100%);
+  color: var(--blanco);
+}
+.scene-5 .scene-inner {
+  text-align: center;
+  align-items: center;
+}
+.hub-header {
+  margin-bottom: 50px;
+}
+.hub-doors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  width: 100%;
+  max-width: 1100px;
+}
+.hub-door {
+  position: relative;
+  background: linear-gradient(180deg, #1F3461 0%, #12284C 100%);
+  border: 1px solid var(--bronze);
+  padding: 28px 18px 22px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+}
+.hub-door::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  background: var(--bronze);
+  transition: width 0.3s;
+}
+.hub-door:hover {
+  background: linear-gradient(180deg, #2A4A7A 0%, #1F3461 100%);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(184, 148, 95, 0.25);
+}
+.hub-door:hover::before {
+  width: 80%;
+}
+.door-icon {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-style: italic;
+  color: var(--bronze-light);
+  margin-bottom: 10px;
+}
+.door-name {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--blanco);
+  margin-bottom: 8px;
+}
+.door-tagline {
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--gris-claro);
+  opacity: 0.85;
+}
+.door-cta {
+  margin-top: 14px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--bronze-light);
+  font-weight: 600;
+}
+
+/* ===================== SCENE 6 · DEPARTMENTS ===================== */
+.scene-6 {
+  background: var(--gris-niebla);
+  height: auto;
+  min-height: 100vh;
+  overflow: visible;
+}
+.scene-6 .scene-inner {
+  padding-top: calc(var(--header-h, 72px) + 32px);
+  padding-bottom: 48px;
+}
+.scene-6 .scene-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 60px;
+  align-items: center;
+}
+.dept-visual {
+  position: relative;
+  height: 60vh;
+  max-height: 520px;
+  border-radius: 0;
+  overflow: hidden;
+}
+.dept-visual.dept-educacion { background: linear-gradient(135deg, #8B6B47 0%, #5C4A35 50%, #3D2F1F 100%); }
+.dept-visual.dept-industria { background: linear-gradient(135deg, #3D4A5C 0%, #2A3441 50%, #1A2128 100%); }
+.dept-visual.dept-legal { background: linear-gradient(135deg, #5C2A2A 0%, #3D1F1F 50%, #2A1515 100%); }
+.dept-visual.dept-finanzas { background: linear-gradient(135deg, #1F4144 0%, #12282A 50%, #082023 100%); }
+.dept-visual.dept-marketing { background: linear-gradient(135deg, #D4B68E 0%, #B8945F 50%, #8B6B47 100%); }
+.dept-visual.dept-operaciones { background: linear-gradient(135deg, #3D4A5C 0%, #2A3441 50%, #1A2128 100%); }
+
+.dept-symbol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--serif);
+  font-size: clamp(80px, 12vw, 180px);
+  color: rgba(255, 255, 255, 0.1);
+  font-style: italic;
+  font-weight: 300;
+  pointer-events: none;
+  user-select: none;
+}
+.dept-visual .filigree {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--bronze-light) 0 24px, transparent 24px 36px, var(--bronze-light) 36px 60px);
+}
+.dept-visual .filigree::before {
+  content: '◆';
+  position: absolute;
+  top: -5px;
+  left: 26px;
+  font-size: 8px;
+  color: var(--bronze-light);
+}
+
+.services-list {
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.service-item {
+  border-left: 2px solid var(--bronze);
+  padding-left: 18px;
+}
+.service-eyebrow {
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--bronze);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.service-name {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--azul-profundo);
+  margin-bottom: 4px;
+  font-style: italic;
+}
+.service-desc {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--gris-antracita);
+}
+
+.case-illustrative {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: var(--blanco);
+  border-left: 3px solid var(--azul-stoa);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--gris-antracita);
+  font-style: italic;
+}
+.case-illustrative strong {
+  color: var(--azul-stoa);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.dept-quote {
+  margin: 20px 0 24px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--gris-antracita);
+  padding-left: 16px;
+  border-left: 2px solid var(--bronze);
+}
+.dept-quote-author {
+  display: block;
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gris-medio);
+  margin-top: 6px;
+}
+
+.dept-ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ===================== SCENE 7 · EVALUACIÓN ===================== */
+.scene-7 {
+  background: radial-gradient(circle at center, #1F3461 0%, #08183A 80%);
+  color: var(--blanco);
+}
+.scene-7 .scene-inner {
+  text-align: center;
+  align-items: center;
+}
+/* Logo de Stoa como rótulo sobre la puerta de la foto (escena 7) */
+.eval-plate {
+  margin: 36px auto 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.eval-plate img {
+  width: clamp(170px, 22vw, 250px);
+  height: auto;
+  filter: drop-shadow(0 6px 34px rgba(0, 0, 0, 0.45));
+}
+.eval-plate .plate-label {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--bronze-light);
+  border-top: 1px solid rgba(212, 182, 142, 0.5);
+  padding-top: 12px;
+}
+
+/* ===================== SCENE 8 · FORM ===================== */
+.scene-8 {
+  background: var(--crema);
+  min-height: 100vh;
+  height: auto;
+}
+.scene-8 .scene-inner {
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.form-card {
+  background: var(--blanco);
+  border: 1px solid var(--gris-claro);
+  padding: clamp(28px, 4vw, 56px);
+  width: 100%;
+  max-width: 720px;
+  position: relative;
+}
+.form-card .progress-container { margin-bottom: 32px; }
+.progress-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gris-antracita);
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.progress-label em {
+  font-style: italic;
+  color: var(--azul-stoa);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: var(--serif);
+  font-size: 13px;
+}
+.progress-bar {
+  width: 100%;
+  height: 2px;
+  background: var(--gris-claro);
+  position: relative;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--azul-stoa);
+  transition: width 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  width: 11%;
+}
+
+.question { display: none; }
+.question.active { display: block; animation: fadeIn 0.4s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.q-meta {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--bronze);
+  margin-bottom: 8px;
+}
+.q-text {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--azul-profundo);
+  margin-bottom: 8px;
+}
+.q-text em { font-style: italic; color: var(--azul-stoa); }
+.q-hint {
+  font-size: 12px;
+  color: var(--gris-medio);
+  font-style: italic;
+  margin-bottom: 22px;
+}
+
+.opt { display: block; margin-bottom: 8px; }
+.opt input[type="radio"], .opt input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.opt label {
+  display: block;
+  padding: 14px 18px;
+  border: 1px solid var(--gris-claro);
+  background: var(--blanco);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--azul-profundo);
+}
+.opt label:hover {
+  border-color: var(--azul-stoa);
+  background: var(--gris-niebla);
+}
+.opt input:checked + label {
+  border-color: var(--azul-stoa);
+  background: var(--azul-stoa);
+  color: var(--blanco);
+}
+
+.text-field { margin-bottom: 14px; }
+.text-field label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gris-antracita);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.text-field input, .text-field select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--gris-claro);
+  background: var(--blanco);
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--azul-profundo);
+  transition: border-color 0.2s;
+}
+.text-field input:focus, .text-field select:focus {
+  outline: none;
+  border-color: var(--azul-stoa);
+}
+.field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.transition-block {
+  background: var(--gris-niebla);
+  padding: 16px 20px;
+  border-left: 3px solid var(--bronze);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--azul-profundo);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  padding-top: 22px;
+  border-top: 1px solid var(--gris-claro);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.success-screen, .loading-screen { display: none; text-align: center; padding: 30px 0; }
+.success-screen.visible, .loading-screen.visible { display: block; animation: fadeIn 0.5s; }
+.success-icon {
+  font-family: var(--serif);
+  font-size: 48px;
+  color: var(--azul-stoa);
+  margin-bottom: 16px;
+}
+.success-title {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 14px;
+  color: var(--azul-profundo);
+}
+.success-title em { font-style: italic; color: var(--azul-stoa); }
+.success-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--gris-antracita);
+  max-width: 48ch;
+  margin: 0 auto 24px;
+}
+.loading-spinner {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--gris-claro);
+  border-top-color: var(--azul-stoa);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+  margin-bottom: 14px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.error-msg { display: none; background: rgba(168,51,42,0.06); border-left: 3px solid #A8332A; padding: 12px 16px; margin-top: 14px; font-size: 12px; color: #A8332A; }
+.error-msg.visible { display: block; }
+
+/* ===================== SCENE 9 · THANKS ===================== */
+.scene-9 {
+  background: linear-gradient(135deg, #08183A 0%, #12284C 50%, #B8945F 130%);
+  color: var(--blanco);
+}
+.scene-9 .scene-inner {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.thanks-quote {
+  margin-top: 36px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--gris-claro);
+  max-width: 50ch;
+}
+.thanks-quote-author {
+  display: block;
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--bronze-light);
+  margin-top: 8px;
+}
+
+.footer {
+  margin-top: 40px;
+  font-size: 11px;
+  color: var(--gris-claro);
+  opacity: 0.7;
+  line-height: 1.7;
+}
+
+/* ===================== PLACEHOLDER NOTICE ===================== */
+.placeholder-notice {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(8, 24, 58, 0.92);
+  color: var(--bronze-light);
+  padding: 10px 16px;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 1px;
+  border-left: 3px solid var(--bronze);
+  z-index: 999;
+  max-width: 280px;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.placeholder-notice strong { color: var(--blanco); font-weight: 600; display: block; margin-bottom: 4px; }
+.placeholder-notice.hidden { opacity: 0; pointer-events: none; }
+.placeholder-notice small { color: var(--gris-claro); font-style: italic; }
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 900px) {
+  .scene-4 .scene-inner, .scene-6 .scene-inner { grid-template-columns: 1fr; gap: 30px; }
+  .scene-4-visual, .dept-visual { height: 35vh; max-height: 320px; }
+  .hub-doors { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .side-nav { display: none; }
+  html { scroll-snap-type: none; }
+  .scene { height: auto; min-height: 100vh; }
+  .scene-1 .scene-inner { padding-top: 40px; padding-bottom: 40px; }
+  .placeholder-notice { font-size: 10px; bottom: 8px; left: 8px; max-width: 220px; }
+}
+@media (max-width: 540px) {
+  .hub-doors { grid-template-columns: 1fr; }
+  .cover-content h1 { font-size: 48px; }
+  .scene-1-header { flex-direction: column; gap: 8px; }
+  .field-grid { grid-template-columns: 1fr; }
+}
+
+/* ===================== FONDOS FOTOGRÁFICOS (Magnific) ===================== */
+.scene-1 .scene-bg,
+.scene-2 .scene-bg,
+.scene-3 .scene-bg,
+.scene-4 .scene-bg,
+.scene-5 .scene-bg,
+.scene-7 .scene-bg,
+.scene-9 .scene-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.scene-1 .scene-bg { background-image: url('assets/escenas/01_exterior.webp'); }
+.scene-5 .scene-bg { background-image: url('assets/escenas/05_hub.webp'); }
+.scene-2 .scene-bg { background-image: url('assets/escenas/02_hall.webp'); }
+.scene-3 .scene-bg { background-image: url('assets/escenas/03_recepcion.webp'); }
+.scene-4 .scene-bg { background-image: url('assets/escenas/04_despacho.webp'); }
+.scene-7 .scene-bg { background-image: url('assets/escenas/07_evaluacion.webp'); }
+.scene-9 .scene-bg { background-image: url('assets/escenas/09_cierre.webp'); }
+
+/* Ocultar el arte SVG placeholder donde ya hay foto */
+.scene-1-towers,
+.scene-2-hall,
+.scene-3-corridor,
+.scene-4-visual { display: none !important; }
+
+/* Con la foto, la escena 4 pasa a una sola columna de texto */
+.scene-4 .scene-inner { grid-template-columns: 1fr; max-width: 1100px; }
+
+/* Scrim de legibilidad sobre las fotos (escenas oscuras, texto claro) */
+.scene-1 .scene-bg::after,
+.scene-2 .scene-bg::after,
+.scene-4 .scene-bg::after,
+.scene-5 .scene-bg::after,
+.scene-7 .scene-bg::after,
+.scene-9 .scene-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8,24,58,0.62) 0%, rgba(8,24,58,0.38) 42%, rgba(8,24,58,0.80) 100%);
+}
+/* Escena 3 ahora oscura: scrim navy + título blanco */
+.scene-3 .scene-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8,24,58,0.66) 0%, rgba(8,24,58,0.45) 45%, rgba(8,24,58,0.78) 100%);
+}
+.scene-3 h2.title { color: var(--blanco); }
+
+/* ===== Fotos de categorías / departamentos (escena 6) ===== */
+.dept-visual.dept-educacion,
+.dept-visual.dept-industria,
+.dept-visual.dept-legal,
+.dept-visual.dept-finanzas,
+.dept-visual.dept-marketing,
+.dept-visual.dept-operaciones {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.dept-visual.dept-educacion { background-image: linear-gradient(180deg, rgba(8,24,58,0.12), rgba(8,24,58,0.45)), url('assets/escenas/06_educacion.webp'); }
+.dept-visual.dept-industria { background-image: linear-gradient(180deg, rgba(8,24,58,0.12), rgba(8,24,58,0.48)), url('assets/escenas/06_industria.webp'); }
+.dept-visual.dept-legal { background-image: linear-gradient(180deg, rgba(8,24,58,0.12), rgba(8,24,58,0.48)), url('assets/escenas/06_legal.webp'); }
+.dept-visual.dept-finanzas { background-image: linear-gradient(180deg, rgba(8,24,58,0.12), rgba(8,24,58,0.48)), url('assets/escenas/06_finanzas.webp'); }
+.dept-visual.dept-marketing { background-image: linear-gradient(180deg, rgba(8,24,58,0.10), rgba(8,24,58,0.42)), url('assets/escenas/06_marketing.webp'); }
+.dept-visual.dept-operaciones { background-image: linear-gradient(180deg, rgba(8,24,58,0.12), rgba(8,24,58,0.48)), url('assets/escenas/06_operaciones.webp'); }
+
+/* Escena 8 · fondo ambiente del formulario (foto crema bajo la tarjeta) */
+.scene-8 {
+  background-image: linear-gradient(180deg, rgba(238,241,245,0.78), rgba(238,241,245,0.92)), url('assets/escenas/08_formulario.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Logo real en la portada (versión blanca sobre la foto de las Torres) */
+.cover-logo {
+  display: block;
+  width: clamp(320px, 46vw, 620px);
+  height: auto;
+  margin-bottom: 14px;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER GLOBAL ===== -->
+<header class="site-header" data-autohide="true">
+  <a href="#s1" class="brand" aria-label="Stoa Consulting · Inicio">
+    <img src="assets/stoa_logo_navy.png" class="brand-logo" alt="Stoa Consulting · Asesor IA para el Comité de Dirección">
+  </a>
+  <nav class="site-nav" aria-label="Navegación principal">
+    <a href="#s4" class="nav-link">Propuesta</a>
+    <div class="nav-item">
+      <a href="#s5" class="nav-link">Frentes</a>
+      <div class="nav-dropdown">
+        <a href="#s6-educacion">Educación</a>
+        <a href="#s6-industria">Industria</a>
+        <a href="#s6-legal">Legal</a>
+        <a href="#s6-finanzas">Finanzas</a>
+        <a href="#s6-marketing">Marketing</a>
+        <a href="#s6-operaciones">Operaciones</a>
+      </div>
+    </div>
+    <a href="#s7" class="nav-link">Valoración</a>
+    <a href="casos.html" class="nav-link">Casos</a>
+    <a href="contacto.html" class="nav-link">Contacto</a>
+  </nav>
+  <div class="header-right">
+    <span class="lang">ES</span>
+    <a href="https://cal.com/stoa-consulting/stoa-call" class="header-cta" target="_blank" rel="noopener">Stoa Call →</a>
+    <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== DRAWER MÓVIL ===== -->
+<div class="drawer-overlay"></div>
+<aside class="drawer" aria-label="Menú móvil">
+  <button class="drawer-close" aria-label="Cerrar menú">&times;</button>
+  <a href="#s4">Propuesta</a>
+  <a href="#s7">Valoración</a>
+  <a href="casos.html">Casos</a>
+  <a href="contacto.html">Contacto</a>
+  <div class="drawer-section">Frentes de trabajo</div>
+  <a href="#s6-educacion">Educación</a>
+  <a href="#s6-industria">Industria</a>
+  <a href="#s6-legal">Legal</a>
+  <a href="#s6-finanzas">Finanzas</a>
+  <a href="#s6-marketing">Marketing</a>
+  <a href="#s6-operaciones">Operaciones</a>
+  <a href="https://cal.com/stoa-consulting/stoa-call" class="drawer-cta" target="_blank" rel="noopener">Agendar Stoa Call →</a>
+</aside>
+
+<!-- ===== SIDE NAV (indicador de progreso) ===== -->
+<nav class="side-nav" aria-label="Progreso de escenas">
+  <a href="#s1" data-scene="1"></a>
+  <a href="#s2" data-scene="2"></a>
+  <a href="#s3" data-scene="3"></a>
+  <a href="#s4" data-scene="4"></a>
+  <a href="#s5" data-scene="5"></a>
+  <a href="#s6" data-scene="6"></a>
+  <a href="#s7" data-scene="7"></a>
+  <a href="#s8" data-scene="8"></a>
+  <a href="#s9" data-scene="9"></a>
+</nav>
+
+<!-- ===== SCENE 1 · EXTERIOR TORRES MADRID ===== -->
+<section class="scene scene-1 scene-cover" id="s1">
+  <div class="scene-bg"></div>
+  <div class="scene-1-towers">
+    <svg class="tower-svg" viewBox="0 0 1400 700" preserveAspectRatio="xMidYEnd meet">
+      <defs>
+        <linearGradient id="tower-grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0F2E63" stop-opacity="0.85"/>
+          <stop offset="0.7" stop-color="#08183A" stop-opacity="0.95"/>
+          <stop offset="1" stop-color="#08183A" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="tower-light" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#D4B68E" stop-opacity="0.4"/>
+          <stop offset="1" stop-color="#B8945F" stop-opacity="0.7"/>
+        </linearGradient>
+      </defs>
+      <!-- 4 torres -->
+      <rect x="180" y="200" width="140" height="500" fill="url(#tower-grad)"/>
+      <rect x="420" y="120" width="160" height="580" fill="url(#tower-grad)"/>
+      <rect x="680" y="160" width="150" height="540" fill="url(#tower-grad)"/>
+      <rect x="930" y="240" width="140" height="460" fill="url(#tower-grad)"/>
+      <!-- ventanas pequeñas -->
+      <g fill="#D4B68E" opacity="0.25">
+        <rect x="200" y="240" width="6" height="6"/><rect x="220" y="240" width="6" height="6"/><rect x="240" y="240" width="6" height="6"/><rect x="260" y="240" width="6" height="6"/><rect x="280" y="240" width="6" height="6"/><rect x="300" y="240" width="6" height="6"/>
+        <rect x="200" y="280" width="6" height="6"/><rect x="240" y="280" width="6" height="6"/><rect x="280" y="280" width="6" height="6"/>
+        <rect x="220" y="320" width="6" height="6"/><rect x="260" y="320" width="6" height="6"/><rect x="300" y="320" width="6" height="6"/>
+        <rect x="200" y="360" width="6" height="6"/><rect x="240" y="360" width="6" height="6"/><rect x="280" y="360" width="6" height="6"/>
+        <rect x="440" y="160" width="6" height="6"/><rect x="480" y="160" width="6" height="6"/><rect x="520" y="160" width="6" height="6"/><rect x="560" y="160" width="6" height="6"/>
+        <rect x="440" y="200" width="6" height="6"/><rect x="500" y="200" width="6" height="6"/><rect x="540" y="200" width="6" height="6"/>
+        <rect x="460" y="240" width="6" height="6"/><rect x="520" y="240" width="6" height="6"/>
+        <rect x="700" y="200" width="6" height="6"/><rect x="740" y="200" width="6" height="6"/><rect x="780" y="200" width="6" height="6"/><rect x="820" y="200" width="6" height="6"/>
+        <rect x="700" y="240" width="6" height="6"/><rect x="760" y="240" width="6" height="6"/><rect x="800" y="240" width="6" height="6"/>
+        <rect x="950" y="280" width="6" height="6"/><rect x="990" y="280" width="6" height="6"/><rect x="1030" y="280" width="6" height="6"/>
+        <rect x="970" y="320" width="6" height="6"/><rect x="1010" y="320" width="6" height="6"/><rect x="1050" y="320" width="6" height="6"/>
+      </g>
+      <!-- Puerta principal en torre central -->
+      <rect x="478" y="640" width="44" height="60" fill="url(#tower-light)" stroke="#B8945F" stroke-width="1"/>
+      <circle cx="500" cy="670" r="20" fill="#D4B68E" opacity="0.2"/>
+      <!-- Plaza -->
+      <rect x="0" y="690" width="1400" height="10" fill="#08183A" opacity="0.6"/>
+    </svg>
+  </div>
+  <div class="scene-inner">
+    <div class="cover-content">
+      <img src="assets/stoa_logo_white.png" class="cover-logo" alt="Stoa Consulting">
+      <span class="cover-eyebrow">Asesor IA · Comité de Dirección</span>
+      <div class="cover-slogan">Espacio de encuentro,<br>ideas y evolución.</div>
+      <div class="cover-cta-row">
+        <a href="#s2" class="cta-enter">Entrar</a>
+        <span class="cover-cta-text">Aquí se decide con criterio.</span>
+      </div>
+    </div>
+  </div>
+  <span class="scene-num">01 / 09</span>
+</section>
+
+<!-- ===== SCENE 2 · HALL ===== -->
+<section class="scene scene-2 scene-noche" id="s2">
+  <div class="scene-bg"></div>
+  <div class="scene-2-hall">
+    <svg viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;opacity:0.5;">
+      <defs>
+        <linearGradient id="hall-floor" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#1F3461" stop-opacity="0"/>
+          <stop offset="1" stop-color="#0F2E63" stop-opacity="0.8"/>
+        </linearGradient>
+      </defs>
+      <!-- Suelo en perspectiva -->
+      <polygon points="0,560 1400,560 1100,800 300,800" fill="url(#hall-floor)"/>
+      <!-- Columnas laterales -->
+      <rect x="80" y="100" width="40" height="500" fill="#12284C" opacity="0.5"/>
+      <rect x="1280" y="100" width="40" height="500" fill="#12284C" opacity="0.5"/>
+      <!-- Ascensores al fondo -->
+      <rect x="540" y="300" width="80" height="260" fill="#08183A" stroke="#B8945F" stroke-width="1.5"/>
+      <rect x="660" y="290" width="80" height="270" fill="#08183A" stroke="#B8945F" stroke-width="2"/>
+      <rect x="780" y="300" width="80" height="260" fill="#08183A" stroke="#B8945F" stroke-width="1.5"/>
+      <!-- Botón 28 iluminado -->
+      <circle cx="700" cy="270" r="14" fill="#0F2E63" stroke="#B8945F" stroke-width="1"/>
+      <text x="700" y="276" font-family="serif" font-size="14" fill="#D4B68E" text-anchor="middle">28</text>
+      <!-- Plantas -->
+      <ellipse cx="200" cy="540" rx="40" ry="80" fill="#12284C" opacity="0.6"/>
+      <ellipse cx="1200" cy="540" rx="40" ry="80" fill="#12284C" opacity="0.6"/>
+    </svg>
+  </div>
+  <div class="scene-inner">
+    <p class="top-text">Tu empresa ya tiene una pregunta sobre IA.<br>Stoa está en el piso 28.</p>
+    <div class="elevator-panel">
+      <span class="floor-label">PISO 28 · STOA</span>
+      <a href="#s3" class="elevator-button" title="Subir">28</a>
+      <span class="elevator-meta">Subir no cuesta nada. Decidir sin criterio, sí.</span>
+    </div>
+  </div>
+  <span class="scene-num">02 / 09</span>
+</section>
+
+<!-- ===== SCENE 3 · RECEPCIÓN ===== -->
+<section class="scene scene-3 scene-noche" id="s3">
+  <div class="scene-bg"></div>
+  <div class="scene-3-corridor">
+    <svg viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;opacity:0.5;">
+      <defs>
+        <linearGradient id="corridor-floor" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#8B6B47" stop-opacity="0"/>
+          <stop offset="1" stop-color="#5C4A35" stop-opacity="0.6"/>
+        </linearGradient>
+        <linearGradient id="corridor-wall" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#F5F1E8" stop-opacity="0"/>
+          <stop offset="1" stop-color="#E8DFC8" stop-opacity="0.4"/>
+        </linearGradient>
+      </defs>
+      <!-- Pared frontal con logo -->
+      <rect x="500" y="200" width="400" height="300" fill="url(#corridor-wall)" stroke="#B8945F" stroke-width="0.5"/>
+      <!-- Logo simulado -->
+      <text x="700" y="340" font-family="Cormorant Garamond, serif" font-style="italic" font-size="36" fill="#0F2E63" text-anchor="middle" opacity="0.7">Stoa</text>
+      <text x="700" y="375" font-family="Inter, sans-serif" font-size="11" fill="#0F2E63" text-anchor="middle" letter-spacing="3" opacity="0.6">CONSULTING</text>
+      <!-- Filigrana -->
+      <line x1="660" y1="400" x2="740" y2="400" stroke="#0F2E63" stroke-width="1" opacity="0.4"/>
+      <circle cx="700" cy="400" r="2" fill="#0F2E63"/>
+      <!-- Puerta abierta al fondo -->
+      <rect x="620" y="430" width="160" height="70" fill="#D4B68E" opacity="0.5"/>
+      <!-- Suelo en perspectiva -->
+      <polygon points="0,500 1400,500 1100,800 300,800" fill="url(#corridor-floor)"/>
+      <!-- Plantas laterales -->
+      <ellipse cx="220" cy="540" rx="50" ry="120" fill="#3D2F1F" opacity="0.3"/>
+      <ellipse cx="1180" cy="540" rx="50" ry="120" fill="#3D2F1F" opacity="0.3"/>
+    </svg>
+  </div>
+  <div class="scene-inner">
+    <span class="eyebrow">BIENVENIDO</span>
+    <h2 class="title"><em>Pensamiento sereno</em> para decisiones complejas.</h2>
+    <p class="lede" style="margin: 0 auto 28px; text-align: center;">Tu Comité quiere usar IA. Tu equipo aún no sabe cómo.<br>Stoa ocupa ese espacio. Sin hype. Con criterio.</p>
+    <a href="#s4" class="btn btn-primary">Conocer Stoa</a>
+  </div>
+  <span class="scene-num">03 / 09</span>
+</section>
+
+<!-- ===== SCENE 4 · DESPACHO ===== -->
+<section class="scene scene-4 scene-noche" id="s4">
+  <div class="scene-bg"></div>
+  <div class="scene-inner">
+    <div class="scene-4-visual">
+      <svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%;">
+        <defs>
+          <linearGradient id="window-grad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#D4B68E" stop-opacity="0.6"/>
+            <stop offset="0.6" stop-color="#B8945F" stop-opacity="0.4"/>
+            <stop offset="1" stop-color="#08183A" stop-opacity="0.7"/>
+          </linearGradient>
+          <linearGradient id="desk-grad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#5C4A35" stop-opacity="0.9"/>
+            <stop offset="1" stop-color="#3D2F1F" stop-opacity="1"/>
+          </linearGradient>
+        </defs>
+        <!-- Ventana grande con skyline -->
+        <rect x="40" y="60" width="220" height="320" fill="url(#window-grad)" stroke="#B8945F" stroke-width="1"/>
+        <!-- Skyline en la ventana -->
+        <g opacity="0.6">
+          <rect x="60" y="240" width="20" height="140" fill="#08183A"/>
+          <rect x="90" y="200" width="24" height="180" fill="#08183A"/>
+          <rect x="124" y="220" width="22" height="160" fill="#08183A"/>
+          <rect x="156" y="260" width="20" height="120" fill="#08183A"/>
+          <rect x="186" y="180" width="26" height="200" fill="#08183A"/>
+          <rect x="222" y="250" width="20" height="130" fill="#08183A"/>
+          <!-- Ventanitas encendidas -->
+          <rect x="65" y="280" width="2" height="2" fill="#D4B68E"/>
+          <rect x="75" y="310" width="2" height="2" fill="#D4B68E"/>
+          <rect x="100" y="250" width="2" height="2" fill="#D4B68E"/>
+          <rect x="190" y="220" width="2" height="2" fill="#D4B68E"/>
+          <rect x="195" y="280" width="2" height="2" fill="#D4B68E"/>
+        </g>
+        <!-- Mesa de roble -->
+        <polygon points="290,360 560,360 540,440 270,440" fill="url(#desk-grad)" stroke="#3D2F1F" stroke-width="1"/>
+        <rect x="290" y="440" width="270" height="6" fill="#3D2F1F"/>
+        <!-- Lámpara de mesa -->
+        <rect x="310" y="320" width="6" height="40" fill="#B8945F"/>
+        <ellipse cx="313" cy="320" rx="22" ry="10" fill="#D4B68E" opacity="0.6"/>
+        <circle cx="313" cy="325" r="18" fill="#F5F1E8" opacity="0.3"/>
+        <!-- Cuaderno -->
+        <rect x="360" y="370" width="60" height="40" fill="#3D2F1F" stroke="#B8945F" stroke-width="0.5"/>
+        <line x1="368" y1="382" x2="412" y2="378" stroke="#B8945F" stroke-width="0.5"/>
+        <line x1="368" y1="392" x2="412" y2="388" stroke="#B8945F" stroke-width="0.5"/>
+        <!-- Taza de café -->
+        <ellipse cx="465" cy="395" rx="14" ry="5" fill="#1A1A1A"/>
+        <rect x="451" y="385" width="28" height="20" fill="#2A2A2A" stroke="#B8945F" stroke-width="0.5"/>
+        <ellipse cx="465" cy="385" rx="14" ry="4" fill="#3D2F1F"/>
+        <!-- Vapor del café -->
+        <path d="M 460,380 Q 458,370 462,360 Q 466,350 460,340" stroke="#F5F1E8" stroke-width="1" fill="none" opacity="0.4"/>
+        <path d="M 470,380 Q 472,370 468,360 Q 464,350 470,340" stroke="#F5F1E8" stroke-width="1" fill="none" opacity="0.3"/>
+        <!-- Estantería derecha -->
+        <rect x="430" y="80" width="130" height="260" fill="#3D2F1F" stroke="#5C4A35" stroke-width="1"/>
+        <line x1="440" y1="130" x2="550" y2="130" stroke="#5C4A35" stroke-width="0.5"/>
+        <line x1="440" y1="180" x2="550" y2="180" stroke="#5C4A35" stroke-width="0.5"/>
+        <line x1="440" y1="230" x2="550" y2="230" stroke="#5C4A35" stroke-width="0.5"/>
+        <line x1="440" y1="280" x2="550" y2="280" stroke="#5C4A35" stroke-width="0.5"/>
+        <!-- Libros -->
+        <g fill="#5C2A2A">
+          <rect x="442" y="100" width="6" height="28"/><rect x="450" y="98" width="7" height="30"/>
+        </g>
+        <g fill="#1F4144">
+          <rect x="460" y="100" width="6" height="28"/><rect x="468" y="102" width="7" height="26"/>
+        </g>
+        <g fill="#3D4A5C">
+          <rect x="478" y="98" width="6" height="30"/><rect x="486" y="100" width="7" height="28"/>
+        </g>
+        <g fill="#5C4A35">
+          <rect x="496" y="100" width="6" height="28"/><rect x="504" y="100" width="7" height="28"/>
+        </g>
+        <g fill="#0F2E63">
+          <rect x="442" y="150" width="6" height="28"/><rect x="450" y="148" width="7" height="30"/><rect x="460" y="152" width="6" height="26"/>
+        </g>
+        <g fill="#5C2A2A">
+          <rect x="470" y="148" width="7" height="30"/><rect x="480" y="150" width="6" height="28"/><rect x="488" y="148" width="7" height="30"/>
+        </g>
+        <!-- Silla parcial -->
+        <rect x="320" y="445" width="80" height="100" fill="#0F2E63" opacity="0.5"/>
+      </svg>
+    </div>
+    <div class="content-col">
+      <span class="eyebrow">EL ASESOR QUE FALTABA</span>
+      <h1 class="display">Tu Comité quiere usar IA.<br><em>Tu equipo aún no sabe cómo.</em></h1>
+      <p class="lede">Entre la urgencia del C-level y la realidad operativa existe una brecha. Stoa interviene ahí. No vendemos software. No vendemos cursos. Vendemos criterio aplicado.</p>
+      <div class="value-bullets">
+        <div class="value-bullet">
+          <div class="marker">◆</div>
+          <div><h4>Criterio antes que herramienta</h4><p>Decidir qué hacer con IA antes de comprar nada.</p></div>
+        </div>
+        <div class="value-bullet">
+          <div class="marker">◆</div>
+          <div><h4>Gobierno desde el principio</h4><p>AI Act, RGPD y riesgo regulatorio integrados en cada decisión.</p></div>
+        </div>
+        <div class="value-bullet">
+          <div class="marker">◆</div>
+          <div><h4>Casos uso con resultado</h4><p>Tres frentes priorizados. Métricas desde la semana uno.</p></div>
+        </div>
+      </div>
+      <a href="#s5" class="btn btn-bronze" style="margin-top: 24px;">Elegir mi frente →</a>
+    </div>
+  </div>
+  <span class="scene-num">04 / 09</span>
+</section>
+
+<!-- ===== SCENE 5 · HUB DE DEPARTAMENTOS ===== -->
+<section class="scene scene-5 scene-noche" id="s5">
+  <div class="scene-bg"></div>
+  <div class="scene-inner">
+    <div class="hub-header">
+      <span class="eyebrow">FRENTES DE TRABAJO</span>
+      <h2 class="title"><em>Elige por dónde</em> quieres entrar.</h2>
+      <p class="lede" style="margin: 0 auto; text-align: center;">Cada sector tiene su propio contexto regulatorio, sus propias fricciones y sus propios casos de uso. Stoa habla el idioma de cada uno.</p>
+    </div>
+    <div class="hub-doors">
+      <a href="#s6-educacion" class="hub-door">
+        <div>
+          <div class="door-icon">📖</div>
+          <h3 class="door-name">Educación</h3>
+          <p class="door-tagline">Claustros divididos.<br>Política IA todavía en papel.</p>
+        </div>
+        <span class="door-cta">Entrar →</span>
+      </a>
+      <a href="#s6-industria" class="hub-door">
+        <div>
+          <div class="door-icon">⚙</div>
+          <h3 class="door-name">Industria</h3>
+          <p class="door-tagline">Los datos están.<br>El método para extraer valor, no.</p>
+        </div>
+        <span class="door-cta">Entrar →</span>
+      </a>
+      <a href="#s6-legal" class="hub-door">
+        <div>
+          <div class="door-icon">⚖</div>
+          <h3 class="door-name">Legal</h3>
+          <p class="door-tagline">Secreto profesional y IA no tienen<br>por qué ser incompatibles.</p>
+        </div>
+        <span class="door-cta">Entrar →</span>
+      </a>
+      <a href="#s6-finanzas" class="hub-door">
+        <div>
+          <div class="door-icon">◈</div>
+          <h3 class="door-name">Finanzas</h3>
+          <p class="door-tagline">Compliance EBA primero.<br>Eficiencia, después.</p>
+        </div>
+        <span class="door-cta">Entrar →</span>
+      </a>
+      <a href="#s6-marketing" class="hub-door">
+        <div>
+          <div class="door-icon">◐</div>
+          <h3 class="door-name">Marketing</h3>
+          <p class="door-tagline">Shadow AI rampante.<br>Protocolo de datos de cliente, urgente.</p>
+        </div>
+        <span class="door-cta">Entrar →</span>
+      </a>
+      <a href="#s6-operaciones" class="hub-door">
+        <div>
+          <div class="door-icon">⟁</div>
+          <h3 class="door-name">Operaciones</h3>
+          <p class="door-tagline">Automatizar sin pensar tiene un precio.<br>Stoa lo calcula antes.</p>
+        </div>
+        <span class="door-cta">Entrar →</span>
+      </a>
+    </div>
+  </div>
+  <span class="scene-num">05 / 09</span>
+</section>
+
+<!-- ===== SCENE 6.1 · EDUCACIÓN ===== -->
+<section class="scene scene-6" id="s6-educacion">
+  <div class="scene-inner">
+    <div class="dept-visual dept-educacion">
+      <span class="dept-symbol">📖</span>
+      <div class="filigree"></div>
+    </div>
+    <div>
+      <span class="eyebrow">DEPARTAMENTO 01 · EDUCACIÓN</span>
+      <h2 class="title">El claustro está dividido sobre la IA. <em>La dirección no puede esperar a que el consenso llegue solo.</em></h2>
+      <p class="lede">Las instituciones educativas que más van a avanzar no serán las que más debatan sobre ética de la IA. Serán las que antes establezcan un marco claro y lo apliquen.<br><br>Stoa entiende la complejidad del sector público: los tiempos de decisión, la política interna, la heterogeneidad del claustro.</p>
+      <div class="services-list">
+        <div class="service-item"><div class="service-eyebrow">FORMACIÓN · STOA INTENSIVE</div><div class="service-name">Dirección y cuerpo docente</div><div class="service-desc">Un marco común para que el equipo directivo y el claustro hablen el mismo idioma sobre IA.</div></div>
+        <div class="service-item"><div class="service-eyebrow">DIAGNÓSTICO · STOA INDEX</div><div class="service-name">Madurez institucional</div><div class="service-desc">Evaluación de las seis dimensiones: estrategia, gobierno, datos, casos uso, talento y tecnología.</div></div>
+        <div class="service-item"><div class="service-eyebrow">POLÍTICA · STOA SPRINT</div><div class="service-name">Marco de uso responsable</div><div class="service-desc">Política de IA aprobable por órganos de gobierno. Adaptada a normativa educativa y AI Act.</div></div>
+      </div>
+      <div class="dept-quote">"No te distraigas con lo que no puedes controlar. Fija el marco de lo que sí puedes."<span class="dept-quote-author">— Marco Aurelio</span></div>
+      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Centro universitario con 3.200 alumnos: política IA aprobada en consejo en 11 semanas. Cero incidentes de uso indebido en el año siguiente.</div>
+      <div class="dept-ctas" style="margin-top: 24px;">
+        <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
+        <a href="#s7" class="btn btn-primary">Valorar mi madurez →</a>
+      </div>
+    </div>
+  </div>
+  <span class="scene-num">06 · 01 / 06</span>
+</section>
+
+<!-- ===== SCENE 6.2 · INDUSTRIA ===== -->
+<section class="scene scene-6" id="s6-industria">
+  <div class="scene-inner">
+    <div class="dept-visual dept-industria">
+      <span class="dept-symbol">⚙</span>
+      <div class="filigree"></div>
+    </div>
+    <div>
+      <span class="eyebrow">DEPARTAMENTO 02 · INDUSTRIA</span>
+      <h2 class="title">Tienes los datos. <em>Lo que falta es el método para convertirlos en decisiones.</em></h2>
+      <p class="lede">La mediana industrial española acumula años de datos de producción, mantenimiento y cadena de suministro. El problema no es la materia prima: es que nadie ha establecido qué preguntas hacerle.<br><br>Stoa llega a planta, entiende los procesos y prioriza los tres casos uso que tienen ROI real en los próximos doce meses.</p>
+      <div class="services-list">
+        <div class="service-item"><div class="service-eyebrow">DIAGNÓSTICO · STOA INDEX</div><div class="service-name">Madurez operativa e industrial</div><div class="service-desc">Mapa de datos disponibles, sistemas existentes y brecha de capacidades internas.</div></div>
+        <div class="service-item"><div class="service-eyebrow">PRIORIZACIÓN · STOA SPRINT</div><div class="service-name">Tres casos uso industriales</div><div class="service-desc">Selección rigurosa. Criterios técnicos, económicos y de viabilidad organizativa.</div></div>
+        <div class="service-item"><div class="service-eyebrow">GOBIERNO · STOA CONTINUUM</div><div class="service-name">Acompañamiento anual</div><div class="service-desc">Seguimiento trimestral de KPIs. Ajuste de hoja de ruta con el Comité.</div></div>
+      </div>
+      <div class="dept-quote">"No actúes como si fueras a vivir diez mil años. Actúa ahora, sobre lo que tienes delante."<span class="dept-quote-author">— Marco Aurelio</span></div>
+      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Empresa de ingeniería industrial, 187 empleados: dos casos uso implementados en 8 semanas. Reducción del 23% en tiempo de revisión de planos. Plan anual aprobado por 280.000 €.</div>
+      <div class="dept-ctas" style="margin-top: 24px;">
+        <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
+        <a href="#s7" class="btn btn-primary">Valorar mi madurez →</a>
+      </div>
+    </div>
+  </div>
+  <span class="scene-num">06 · 02 / 06</span>
+</section>
+
+<!-- ===== SCENE 6.3 · LEGAL ===== -->
+<section class="scene scene-6" id="s6-legal">
+  <div class="scene-inner">
+    <div class="dept-visual dept-legal">
+      <span class="dept-symbol">⚖</span>
+      <div class="filigree"></div>
+    </div>
+    <div>
+      <span class="eyebrow">DEPARTAMENTO 03 · LEGAL</span>
+      <h2 class="title">El secreto profesional no es un argumento contra la IA. <em>Es el punto de partida para usarla bien.</em></h2>
+      <p class="lede">Los despachos que más van a avanzar no son los que esperan que las herramientas sean perfectas. Son los que establecen ahora qué datos pueden entrar, qué herramientas son aceptables y qué procedimientos protegen al cliente.<br><br>Stoa conoce las obligaciones deontológicas del ICAM, el CGAE y el AI Act. Construimos el marco que permite avanzar sin exponer al despacho.</p>
+      <div class="services-list">
+        <div class="service-item"><div class="service-eyebrow">POLÍTICA · STOA SPRINT</div><div class="service-name">Protocolo IA para despacho</div><div class="service-desc">Política de uso con procedimiento para conflictos, secreto profesional y datos de cliente.</div></div>
+        <div class="service-item"><div class="service-eyebrow">FORMACIÓN · STOA INTENSIVE</div><div class="service-name">Socios y asociados senior</div><div class="service-desc">Qué herramientas se pueden usar, en qué contextos, con qué datos. Sin ambigüedades.</div></div>
+        <div class="service-item"><div class="service-eyebrow">CASOS USO · STOA SPRINT</div><div class="service-name">Due diligence y document review</div><div class="service-desc">Los dos casos uso con mayor retorno para despacho mid-size. Implementación supervisada.</div></div>
+      </div>
+      <div class="dept-quote">"Lo que no es bueno para el enjambre no es bueno para la abeja."<span class="dept-quote-author">— Marco Aurelio</span></div>
+      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Despacho boutique mercantil, 10 empleados: política IA aprobada y 2 casos uso en producción en 8 semanas. Stoa Index: de 1,9 a 2,8. Stoa Continuum contratado a continuación.</div>
+      <div class="dept-ctas" style="margin-top: 24px;">
+        <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
+        <a href="#s7" class="btn btn-primary">Valorar mi madurez →</a>
+      </div>
+    </div>
+  </div>
+  <span class="scene-num">06 · 03 / 06</span>
+</section>
+
+<!-- ===== SCENE 6.4 · FINANZAS ===== -->
+<section class="scene scene-6" id="s6-finanzas">
+  <div class="scene-inner">
+    <div class="dept-visual dept-finanzas">
+      <span class="dept-symbol">◈</span>
+      <div class="filigree"></div>
+    </div>
+    <div>
+      <span class="eyebrow">DEPARTAMENTO 04 · FINANZAS</span>
+      <h2 class="title">El supervisor ya ha publicado su guía. <em>Tu comité todavía no tiene respuesta.</em></h2>
+      <p class="lede">EBA, EIOPA y Banco de España han emitido orientaciones sobre IA en servicios financieros. No son recomendaciones: son el marco que los supervisores usarán para evaluar tu gobierno de IA.<br><br>Stoa combina criterio estratégico con conocimiento de las expectativas regulatorias.</p>
+      <div class="services-list">
+        <div class="service-item"><div class="service-eyebrow">GOBIERNO · STOA SPRINT</div><div class="service-name">Marco regulatorio y AI Act</div><div class="service-desc">Inventario de sistemas IA, clasificación de riesgo, controles mínimos exigibles y política aprobable por consejo.</div></div>
+        <div class="service-item"><div class="service-eyebrow">FORMACIÓN · STOA INTENSIVE</div><div class="service-name">Comité y dirección</div><div class="service-desc">Dos días con el Comité: qué exige el regulador, qué hace la competencia, qué decide la entidad hoy.</div></div>
+        <div class="service-item"><div class="service-eyebrow">ACOMPAÑAMIENTO · STOA COUNCIL</div><div class="service-name">Anual</div><div class="service-desc">Revisión trimestral de posición regulatoria y hoja de ruta de casos uso. Presencia en el Comité.</div></div>
+      </div>
+      <div class="dept-quote">"El primer paso hacia la prudencia es conocer el terreno."<span class="dept-quote-author">— Zenón de Citio</span></div>
+      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Gestora patrimonial de banca privada: política IA compatible con EBA Guidelines on ICT Risk aprobada por consejo en 12 semanas.</div>
+      <div class="dept-ctas" style="margin-top: 24px;">
+        <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
+        <a href="#s7" class="btn btn-primary">Valorar mi madurez →</a>
+      </div>
+    </div>
+  </div>
+  <span class="scene-num">06 · 04 / 06</span>
+</section>
+
+<!-- ===== SCENE 6.5 · MARKETING ===== -->
+<section class="scene scene-6" id="s6-marketing">
+  <div class="scene-inner">
+    <div class="dept-visual dept-marketing">
+      <span class="dept-symbol">◐</span>
+      <div class="filigree"></div>
+    </div>
+    <div>
+      <span class="eyebrow">DEPARTAMENTO 05 · MARKETING</span>
+      <h2 class="title">Tu equipo ya usa IA con datos de clientes. <em>Probablemente sin que nadie lo haya autorizado.</em></h2>
+      <p class="lede">El Shadow AI en marketing no es una hipótesis: es la norma. Textos generados, imágenes producidas, análisis de audiencias volcados en herramientas gratuitas sin política de datos ni protocolo de revisión.<br><br>Stoa no viene a prohibir. Viene a establecer qué se puede usar, cómo y con qué salvaguardas. Para que el equipo avance rápido sin exponer a la empresa.</p>
+      <div class="services-list">
+        <div class="service-item"><div class="service-eyebrow">DIAGNÓSTICO · STOA INDEX</div><div class="service-name">Auditoría Shadow AI</div><div class="service-desc">Mapa de herramientas en uso, datos involucrados y exposición real. Sin juicio. Con criterio.</div></div>
+        <div class="service-item"><div class="service-eyebrow">POLÍTICA · STOA SPRINT</div><div class="service-name">Protocolo de uso en marketing</div><div class="service-desc">Qué herramientas están aprobadas. Qué datos pueden entrar. Qué outputs requieren revisión humana.</div></div>
+        <div class="service-item"><div class="service-eyebrow">CASOS USO · STOA SPRINT</div><div class="service-name">Producción de contenidos y personalización</div><div class="service-desc">Los tres casos uso más productivos para equipos de marketing. Con métricas desde el inicio.</div></div>
+      </div>
+      <div class="dept-quote">"Nada es tan empobrecedor como la prisa irreflexiva."<span class="dept-quote-author">— Séneca</span></div>
+      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Departamento de marketing in-house, empresa de consumo, 45 personas: auditoría Shadow AI completada en 2 semanas. Protocolo aprobado.</div>
+      <div class="dept-ctas" style="margin-top: 24px;">
+        <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
+        <a href="#s7" class="btn btn-primary">Valorar mi madurez →</a>
+      </div>
+    </div>
+  </div>
+  <span class="scene-num">06 · 05 / 06</span>
+</section>
+
+<!-- ===== SCENE 6.6 · OPERACIONES ===== -->
+<section class="scene scene-6" id="s6-operaciones">
+  <div class="scene-inner">
+    <div class="dept-visual dept-operaciones">
+      <span class="dept-symbol">⟁</span>
+      <div class="filigree"></div>
+    </div>
+    <div>
+      <span class="eyebrow">DEPARTAMENTO 06 · OPERACIONES</span>
+      <h2 class="title">Automatizar un proceso roto no lo arregla. <em>Lo hace roto más deprisa.</em></h2>
+      <p class="lede">La presión por automatizar es real. Los procesos candidatos, también. Lo que a menudo falta es el análisis previo: qué vale la pena automatizar, en qué orden, con qué impacto en el equipo y qué riesgos introduce.<br><br>Stoa mapea antes de recomendar. Y recomienda antes de que se contrate la herramienta equivocada.</p>
+      <div class="services-list">
+        <div class="service-item"><div class="service-eyebrow">DIAGNÓSTICO · STOA INDEX</div><div class="service-name">Mapa de procesos candidatos</div><div class="service-desc">Identificación y priorización de procesos por impacto, viabilidad técnica y riesgo de adopción.</div></div>
+        <div class="service-item"><div class="service-eyebrow">PRIORIZACIÓN · STOA SPRINT</div><div class="service-name">Tres casos uso operativos</div><div class="service-desc">Selección con criterio. No los más llamativos: los que tienen retorno demostrable en el año uno.</div></div>
+        <div class="service-item"><div class="service-eyebrow">GOBIERNO · STOA CONTINUUM</div><div class="service-name">Seguimiento trimestral</div><div class="service-desc">Revisión del progreso con el Comité. Ajuste de hoja de ruta según resultados reales.</div></div>
+      </div>
+      <div class="dept-quote">"La diferencia entre el hombre sabio y el impulsivo no está en la velocidad: está en saber cuándo parar."<span class="dept-quote-author">— Marco Aurelio</span></div>
+      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Empresa logística, 340 empleados: tres procesos evaluados. Uno descartado. Dos en producción en 10 semanas. Ahorro: 1.200 horas/año.</div>
+      <div class="dept-ctas" style="margin-top: 24px;">
+        <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
+        <a href="#s7" class="btn btn-primary">Valorar mi madurez →</a>
+      </div>
+    </div>
+  </div>
+  <span class="scene-num">06 · 06 / 06</span>
+</section>
+
+<!-- ===== SCENE 7 · EVALUACIÓN ===== -->
+<section class="scene scene-7 scene-noche" id="s7">
+  <div class="scene-bg"></div>
+  <div class="scene-inner">
+    <h1 class="display" style="text-align: center;"><em>¿Dónde está tu empresa hoy?</em></h1>
+    <p class="lede" style="text-align: center; margin: 0 auto; max-width: 50ch;">Ocho preguntas. Tres minutos. Recibirás un mapa personalizado de tu madurez IA en menos de veinticuatro horas.<br><br>Sin presentación de ventas. Sin compromiso.</p>
+    <div class="eval-plate">
+      <img src="assets/stoa_logo_white.png" alt="Stoa Consulting">
+      <span class="plate-label">Valoración</span>
+    </div>
+    <a href="#s8" class="btn btn-bronze">Comenzar mi valoración →</a>
+    <p style="font-family: var(--serif); font-style: italic; font-size: clamp(18px, 1.8vw, 22px); color: var(--bronze-light); margin-top: 22px;">No hay respuestas incorrectas. Solo un diagnóstico más ajustado.</p>
+  </div>
+  <span class="scene-num">07 / 09</span>
+</section>
+
+<!-- ===== SCENE 8 · FORMULARIO ===== -->
+<section class="scene scene-8" id="s8">
+  <div class="scene-inner">
+    <div class="form-card" id="form-card">
+      <span class="eyebrow">VALORACIÓN STOA · MADUREZ IA</span>
+      <h2 class="title">Ocho preguntas honestas. <em>Sin adornos. Con criterio.</em></h2>
+
+      <div class="progress-container" style="margin-top: 28px;">
+        <div class="progress-label">
+          <span id="progress-num">Paso 1 de 9</span>
+          <em id="progress-tag">Madurez actual</em>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      </div>
+
+      <form id="valoracion-form" onsubmit="return false;">
+
+        <div class="question active" data-step="1" data-tag="Madurez actual">
+          <div class="q-meta">Pregunta 1 de 8 · Empresarial</div>
+          <h2 class="q-text">¿Cómo describirías el uso actual de IA <em>dentro de tu organización</em>?</h2>
+          <ul style="list-style:none">
+            <li class="opt"><input type="radio" name="q1" value="1" id="q1-1"><label for="q1-1">Apenas se usa. Algún empleado prueba ChatGPT en su tiempo libre.</label></li>
+            <li class="opt"><input type="radio" name="q1" value="2" id="q1-2"><label for="q1-2">Se usa de forma informal. Sin políticas, sin protocolos, sin medición.</label></li>
+            <li class="opt"><input type="radio" name="q1" value="3" id="q1-3"><label for="q1-3">Hay iniciativas puntuales. Un par de áreas la han adoptado por su cuenta.</label></li>
+            <li class="opt"><input type="radio" name="q1" value="4" id="q1-4"><label for="q1-4">Estamos en un piloto formal. Con responsables definidos.</label></li>
+            <li class="opt"><input type="radio" name="q1" value="5" id="q1-5"><label for="q1-5">Tenemos IA integrada en procesos críticos con gobernanza propia.</label></li>
+          </ul>
+        </div>
+
+        <div class="question" data-step="2" data-tag="Política institucional">
+          <div class="q-meta">Pregunta 2 de 8 · Empresarial</div>
+          <h2 class="q-text">¿Tu empresa tiene una <em>política formal</em> de uso responsable de IA?</h2>
+          <ul style="list-style:none">
+            <li class="opt"><input type="radio" name="q2" value="1" id="q2-1"><label for="q2-1">No. Nadie ha planteado el tema en serio.</label></li>
+            <li class="opt"><input type="radio" name="q2" value="2" id="q2-2"><label for="q2-2">No. Lo hemos hablado pero no hay nada escrito.</label></li>
+            <li class="opt"><input type="radio" name="q2" value="3" id="q2-3"><label for="q2-3">Hay un borrador en curso, sin aprobar.</label></li>
+            <li class="opt"><input type="radio" name="q2" value="4" id="q2-4"><label for="q2-4">Sí, pero no se está aplicando con disciplina.</label></li>
+            <li class="opt"><input type="radio" name="q2" value="5" id="q2-5"><label for="q2-5">Sí, aprobada por dirección y aplicada con seguimiento.</label></li>
+          </ul>
+        </div>
+
+        <div class="question" data-step="3" data-tag="Shadow AI">
+          <div class="q-meta">Pregunta 3 de 8 · Empresarial</div>
+          <h2 class="q-text">¿Tienes certeza de que <em>ningún empleado</em> está introduciendo información confidencial en herramientas IA gratuitas?</h2>
+          <p class="q-hint">Datos de clientes, finanzas, RRHH, contratos…</p>
+          <ul style="list-style:none">
+            <li class="opt"><input type="radio" name="q3" value="1" id="q3-1"><label for="q3-1">Estoy seguro de que sí está pasando.</label></li>
+            <li class="opt"><input type="radio" name="q3" value="2" id="q3-2"><label for="q3-2">Sospecho que sí pasa, pero no lo he confirmado.</label></li>
+            <li class="opt"><input type="radio" name="q3" value="3" id="q3-3"><label for="q3-3">Probablemente no pasa, pero no tenemos forma de saberlo.</label></li>
+            <li class="opt"><input type="radio" name="q3" value="4" id="q3-4"><label for="q3-4">Tenemos protocolos que lo limitan, aunque no auditados.</label></li>
+            <li class="opt"><input type="radio" name="q3" value="5" id="q3-5"><label for="q3-5">Está controlado y auditado.</label></li>
+          </ul>
+        </div>
+
+        <div class="question" data-step="4" data-tag="Prioridad comité">
+          <div class="q-meta">Pregunta 4 de 8 · Empresarial</div>
+          <h2 class="q-text">¿Cuál es la prioridad de la IA en tu comité de dirección en los <em>próximos 12 meses</em>?</h2>
+          <ul style="list-style:none">
+            <li class="opt"><input type="radio" name="q4" value="1" id="q4-1"><label for="q4-1">No está en la agenda del comité.</label></li>
+            <li class="opt"><input type="radio" name="q4" value="2" id="q4-2"><label for="q4-2">Está en la agenda pero como tema secundario.</label></li>
+            <li class="opt"><input type="radio" name="q4" value="3" id="q4-3"><label for="q4-3">Es uno de los 3-5 temas principales.</label></li>
+            <li class="opt"><input type="radio" name="q4" value="4" id="q4-4"><label for="q4-4">Es el tema número uno este año.</label></li>
+            <li class="opt"><input type="radio" name="q4" value="5" id="q4-5"><label for="q4-5">Tenemos presupuesto aprobado y un responsable dedicado.</label></li>
+          </ul>
+        </div>
+
+        <div class="question" data-step="5" data-tag="Tú como decisor">
+          <div class="transition-block">Ahora, tres preguntas sobre ti. El mapa es más útil cuando incluye al decisor.</div>
+          <div class="q-meta">Pregunta 5 de 8 · Personal</div>
+          <h2 class="q-text">¿Con qué frecuencia usas IA <em>tú personalmente</em> en tu trabajo?</h2>
+          <ul style="list-style:none">
+            <li class="opt"><input type="radio" name="q5" value="1" id="q5-1"><label for="q5-1">Nunca o casi nunca.</label></li>
+            <li class="opt"><input type="radio" name="q5" value="2" id="q5-2"><label for="q5-2">Algunas veces al mes.</label></li>
+            <li class="opt"><input type="radio" name="q5" value="3" id="q5-3"><label for="q5-3">Algunas veces a la semana.</label></li>
+            <li class="opt"><input type="radio" name="q5" value="4" id="q5-4"><label for="q5-4">Varias veces al día.</label></li>
+            <li class="opt"><input type="radio" name="q5" value="5" id="q5-5"><label for="q5-5">Es parte estructural de cómo trabajo.</label></li>
+          </ul>
+        </div>
+
+        <div class="question" data-step="6" data-tag="Confianza criterio">
+          <div class="q-meta">Pregunta 6 de 8 · Personal</div>
+          <h2 class="q-text">¿Cómo de cómodo te sientes <em>evaluando si una propuesta técnica</em> sobre IA tiene sentido o no?</h2>
+          <ul style="list-style:none">
+            <li class="opt"><input type="radio" name="q6" value="1" id="q6-1"><label for="q6-1">Muy poco cómodo. Dependo del CTO o consultores externos.</label></li>
+            <li class="opt"><input type="radio" name="q6" value="2" id="q6-2"><label for="q6-2">Poco cómodo. Entiendo lo básico pero me pierdo en los detalles.</label></li>
+            <li class="opt"><input type="radio" name="q6" value="3" id="q6-3"><label for="q6-3">Razonablemente cómodo. Puedo hacer preguntas pertinentes.</label></li>
+            <li class="opt"><input type="radio" name="q6" value="4" id="q6-4"><label for="q6-4">Cómodo. Puedo desafiar propuestas con criterio.</label></li>
+            <li class="opt"><input type="radio" name="q6" value="5" id="q6-5"><label for="q6-5">Muy cómodo. Soy yo quien lidera la conversación técnica.</label></li>
+          </ul>
+        </div>
+
+        <div class="question" data-step="7" data-tag="Preocupación">
+          <div class="q-meta">Pregunta 7 de 8 · Personal</div>
+          <h2 class="q-text">Cuando piensas en IA en tu empresa, <em>¿qué te preocupa más?</em></h2>
+          <p class="q-hint">Elige una.</p>
+          <ul style="list-style:none">
+            <li class="opt"><input type="radio" name="q7" value="competencia" id="q7-1"><label for="q7-1">Quedarme atrás respecto a la competencia.</label></li>
+            <li class="opt"><input type="radio" name="q7" value="adaptacion" id="q7-2"><label for="q7-2">Que mi equipo no sepa adaptarse.</label></li>
+            <li class="opt"><input type="radio" name="q7" value="regulatorio" id="q7-3"><label for="q7-3">Riesgos legales o regulatorios (RGPD, AI Act).</label></li>
+            <li class="opt"><input type="radio" name="q7" value="inversion" id="q7-4"><label for="q7-4">Gastar mucho dinero sin retorno claro.</label></li>
+            <li class="opt"><input type="radio" name="q7" value="datos" id="q7-5"><label for="q7-5">Decisiones tomadas con datos sesgados o erróneos.</label></li>
+          </ul>
+        </div>
+
+        <div class="question" data-step="8" data-tag="Necesidades">
+          <div class="q-meta">Pregunta 8 de 8 · Personal</div>
+          <h2 class="q-text">¿Qué necesitas tú <em>en los próximos 3 meses</em> respecto a IA?</h2>
+          <p class="q-hint">Elige hasta 2.</p>
+          <ul style="list-style:none">
+            <li class="opt"><input type="checkbox" name="q8" value="entender" id="q8-1"><label for="q8-1">Entender el panorama: qué es realmente IA y qué no.</label></li>
+            <li class="opt"><input type="checkbox" name="q8" value="herramientas" id="q8-2"><label for="q8-2">Saber qué puede usar mi equipo con tranquilidad y qué no.</label></li>
+            <li class="opt"><input type="checkbox" name="q8" value="casos" id="q8-3"><label for="q8-3">Identificar 2-3 casos uso concretos en mi área.</label></li>
+            <li class="opt"><input type="checkbox" name="q8" value="politica" id="q8-4"><label for="q8-4">Definir una política institucional defendible.</label></li>
+            <li class="opt"><input type="checkbox" name="q8" value="formacion" id="q8-5"><label for="q8-5">Formación práctica para el comité de dirección.</label></li>
+            <li class="opt"><input type="checkbox" name="q8" value="red" id="q8-6"><label for="q8-6">Conectar con otros decisores en mi situación.</label></li>
+          </ul>
+        </div>
+
+        <div class="question" data-step="9" data-tag="Cierre">
+          <div class="q-meta">Datos finales · 30 segundos</div>
+          <h2 class="q-text">Casi listo. <em>Para enviarte el mapa.</em></h2>
+          <p class="q-hint">Confidencial. Solo se usa para preparar la llamada.</p>
+          <div class="text-field"><label for="nombre">Nombre y apellidos</label><input type="text" id="nombre" name="nombre" required></div>
+          <div class="text-field"><label for="empresa">Empresa</label><input type="text" id="empresa" name="empresa" required></div>
+          <div class="text-field"><div class="field-grid">
+            <div><label for="rol">Rol / cargo</label><select id="rol" name="rol" required><option value="">Selecciona…</option><option value="CEO">CEO / Director General</option><option value="COO">Director Operaciones</option><option value="CTO">Director Tecnología</option><option value="CFO">Director Financiero</option><option value="CHRO">Director RRHH</option><option value="CMO">Director Marketing</option><option value="Comite">Otro miembro comité</option><option value="Mando">Mando intermedio</option><option value="Otro">Otro</option></select></div>
+            <div><label for="tamano">Tamaño empresa</label><select id="tamano" name="tamano" required><option value="">Selecciona…</option><option value="<10">Menos de 10</option><option value="10-50">10-50</option><option value="50-250">50-250</option><option value="250-1000">250-1.000</option><option value=">1000">Más de 1.000</option></select></div>
+          </div></div>
+          <div class="text-field"><div class="field-grid">
+            <div><label for="sector">Sector</label><select id="sector" name="sector" required><option value="">Selecciona…</option><option value="Educacion">Educación</option><option value="Industria">Industria</option><option value="Legal">Legal</option><option value="Finanzas">Finanzas</option><option value="Marketing">Marketing</option><option value="Operaciones">Operaciones</option><option value="Otro">Otro</option></select></div>
+            <div><label for="urgencia">Urgencia</label><select id="urgencia" name="urgencia"><option value="">Sin prisa</option><option value="semana">Esta semana</option><option value="proxima">La próxima</option><option value="mes">Este mes</option></select></div>
+          </div></div>
+          <div class="text-field"><label for="email">Email corporativo</label><input type="email" id="email" name="email" required></div>
+          <div class="error-msg" id="error-msg"></div>
+        </div>
+
+        <div class="nav-buttons">
+          <button type="button" class="btn btn-ghost" id="btn-prev">← Atrás</button>
+          <button type="button" class="btn btn-primary" id="btn-next">Siguiente →</button>
+        </div>
+      </form>
+
+      <div class="loading-screen" id="loading-screen">
+        <div class="loading-spinner"></div>
+        <p style="color:var(--gris-antracita); font-style: italic;">Guardando tu valoración…</p>
+      </div>
+
+      <div class="success-screen" id="success-screen">
+        <div class="success-icon">◆</div>
+        <h2 class="success-title">Recibido.<br><em>Tu mapa está en camino.</em></h2>
+        <p class="success-text">Hemos guardado tu valoración. En las próximas <strong>veinticuatro horas</strong> tendrás en tu correo el mapa completo de tu posición.<br><br>El siguiente paso, si te parece bien, es una <strong>Stoa Call de treinta minutos</strong>. Sin presentación. Sin vendedor.</p>
+        <a href="#s9" class="btn btn-primary">Continuar →</a>
+      </div>
+    </div>
+  </div>
+  <span class="scene-num">08 / 09</span>
+</section>
+
+<!-- ===== SCENE 9 · GRACIAS / STOA CALL ===== -->
+<section class="scene scene-9 scene-noche" id="s9">
+  <div class="scene-bg"></div>
+  <div class="scene-inner">
+    <span class="eyebrow">GRACIAS</span>
+    <h1 class="display"><em>Hemos recibido tu valoración.</em><br>Tu mapa está en camino.</h1>
+    <p class="lede" style="text-align: center; max-width: 60ch; margin: 0 auto 32px;">En menos de veinticuatro horas recibirás en tu correo el mapa personalizado de madurez IA con tu posición actual, qué tienes ya resuelto y cuál es el siguiente paso natural para tu empresa.<br><br>Si quieres adelantar la conversación, la Stoa Call está disponible ahora. Treinta minutos. Sin compromiso. Una llamada no compromete nada. Una decisión sin criterio, sí.</p>
+    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+      <a href="https://cal.com/stoa-consulting/stoa-call" class="btn btn-bronze" target="_blank">Agendar mi Stoa Call ahora</a>
+      <a href="#s1" class="btn-link-dark btn">Volver al inicio</a>
+    </div>
+    <div class="thanks-quote">"Nada es tuyo excepto tu forma de responder a lo que te ocurre."<span class="thanks-quote-author">— Epicteto</span></div>
+  </div>
+  <span class="scene-num">09 / 09</span>
+</section>
+
+<!-- ===== FOOTER GLOBAL ===== -->
+<footer class="site-footer">
+  <div class="footer-statement">
+    <span class="diamond">◆</span>
+    <em>Espacio de encuentro, ideas y evolución.</em>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <img src="assets/stoa_logo_navy.png" class="footer-logo" alt="Stoa Consulting">
+      <p class="footer-desc">Asesor IA independiente para Comités de Dirección de gran empresa española. Sin hype. Con criterio.</p>
+      <p class="footer-address">Stoa Consulting S.L.<br>Madrid · España<br>NIF · pendiente</p>
+    </div>
+    <div class="footer-col">
+      <span class="eyebrow">Navegar</span>
+      <a href="#s4">Propuesta</a>
+      <a href="#s5">Frentes de trabajo</a>
+      <a href="#s7">Valoración</a>
+      <a href="https://cal.com/stoa-consulting/stoa-call" target="_blank" rel="noopener">Stoa Call</a>
+      <a href="casos.html">Casos</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <div class="footer-col">
+      <span class="eyebrow">Frentes de trabajo</span>
+      <a href="#s6-educacion">Educación</a>
+      <a href="#s6-industria">Industria</a>
+      <a href="#s6-legal">Legal</a>
+      <a href="#s6-finanzas">Finanzas</a>
+      <a href="#s6-marketing">Marketing</a>
+      <a href="#s6-operaciones">Operaciones</a>
+    </div>
+    <div class="footer-col">
+      <span class="eyebrow">Contacto</span>
+      <div class="footer-contact-line">General · <a href="mailto:hello@stoa.consulting">hello@stoa.consulting</a></div>
+      <div class="footer-contact-line">Directo · <a href="mailto:antelo@stoa.consulting">antelo@stoa.consulting</a></div>
+      <div class="footer-contact-line">Stoa Call · <a href="https://cal.com/stoa-consulting/stoa-call" target="_blank" rel="noopener">cal.com/stoa-consulting</a></div>
+      <div class="footer-sep"></div>
+      <span class="eyebrow">Síguenos</span>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/jmantelo" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05C20.4 8.65 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.32-2.02-3.32-2.02 0-2.33 1.58-2.33 3.21V21H9z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-quote">
+    <em>"Nada es tuyo excepto tu forma de responder a lo que te ocurre."</em>
+    <span class="author">Epicteto</span>
+  </div>
+  <div class="footer-legal">
+    <span class="copy">© 2026 Stoa Consulting · Todos los derechos reservados.</span>
+    <span class="links">
+      <a href="aviso-legal.html">Aviso legal</a><span class="dot">·</span>
+      <a href="privacidad.html">Política de privacidad</a><span class="dot">·</span>
+      <a href="cookies.html">Política de cookies</a>
+    </span>
+  </div>
+  <div class="footer-seal">◆</div>
+</footer>
+
+<!-- ===== BANNER COOKIES ===== -->
+<div class="cookie-banner" role="dialog" aria-label="Aviso de cookies">
+  <p class="cookie-text"><strong>Usamos cookies con criterio.</strong> Solo las imprescindibles para que el sitio funcione y, si lo aceptas, analítica anónima para mejorar la experiencia. Consulta nuestra <a href="cookies.html">política de cookies</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-ghost" data-cookie="reject">Solo esenciales</button>
+    <button class="btn btn-primary" data-cookie="accept">Aceptar</button>
+  </div>
+</div>
+
+<script src="assets/stoa.js"></script>
+<script>
+// ===== SIDE NAV ACTIVE STATE =====
+const navLinks = document.querySelectorAll('.side-nav a');
+const sceneSections = document.querySelectorAll('.scene[id^="s"]:not([id^="s6-"])');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const sceneId = e.target.id;
+      // Map s6-xxx scenes to nav link 6
+      let navIdx = -1;
+      if (sceneId.startsWith('s6-')) {
+        navIdx = 5; // index of s6 link
+      } else {
+        navIdx = Array.from(sceneSections).indexOf(e.target);
+      }
+      navLinks.forEach((l, i) => l.classList.toggle('active', i === navIdx));
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.scene').forEach(s => observer.observe(s));
+
+// ===== FORM LOGIC =====
+let currentStep = 1;
+const totalSteps = 9;
+const answers = {};
+
+const form = document.getElementById('valoracion-form');
+const progressFill = document.getElementById('progress-fill');
+const progressNum = document.getElementById('progress-num');
+const progressTag = document.getElementById('progress-tag');
+const btnNext = document.getElementById('btn-next');
+const btnPrev = document.getElementById('btn-prev');
+const errorMsg = document.getElementById('error-msg');
+const loadingScreen = document.getElementById('loading-screen');
+const successScreen = document.getElementById('success-screen');
+
+function showStep(n) {
+  document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+  const step = document.querySelector(`.question[data-step="${n}"]`);
+  if (!step) return;
+  step.classList.add('active');
+  progressFill.style.width = `${(n / totalSteps) * 100}%`;
+  progressNum.textContent = n === totalSteps ? 'Último paso' : `Paso ${n} de 9`;
+  progressTag.textContent = step.dataset.tag;
+  btnPrev.style.visibility = n === 1 ? 'hidden' : 'visible';
+  btnNext.textContent = n === totalSteps ? 'Enviar valoración →' : 'Siguiente →';
+  errorMsg.classList.remove('visible');
+}
+
+function showError(msg) {
+  errorMsg.textContent = msg;
+  errorMsg.classList.add('visible');
+  setTimeout(() => errorMsg.classList.remove('visible'), 4000);
+}
+
+function validateStep(n) {
+  const step = document.querySelector(`.question[data-step="${n}"]`);
+  if (!step) return false;
+  if (n === 8) {
+    const checked = step.querySelectorAll('input[type="checkbox"]:checked');
+    if (checked.length === 0) { showError('Elige al menos una opción.'); return false; }
+    if (checked.length > 2) { showError('Máximo 2 opciones.'); return false; }
+    answers.q8 = Array.from(checked).map(c => c.value);
+    return true;
+  }
+  if (n === 9) {
+    const fields = ['nombre', 'empresa', 'rol', 'tamano', 'sector', 'email'];
+    for (const f of fields) {
+      const el = document.getElementById(f);
+      if (!el.value.trim()) { showError('Por favor completa todos los campos requeridos.'); el.focus(); return false; }
+      answers[f] = el.value.trim();
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(answers.email)) { showError('El email no parece válido.'); return false; }
+    answers.urgencia = document.getElementById('urgencia').value || 'sin';
+    return true;
+  }
+  const checked = step.querySelector('input[type="radio"]:checked');
+  if (!checked) { showError('Elige una opción para continuar.'); return false; }
+  answers[`q${n}`] = checked.value;
+  return true;
+}
+
+function calculateScore() {
+  return ['q1','q2','q3','q4','q5','q6'].reduce((acc, q) => acc + parseInt(answers[q] || 0), 0);
+}
+
+function submitForm() {
+  const score = calculateScore();
+  console.log('Stoa Index Light · Score:', score, '· Nivel:', score < 13 ? '1' : score < 19 ? '2' : score < 24 ? '3' : score < 28 ? '4' : '5');
+  console.log('Respuestas:', answers);
+  // En producción: fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: JSON.stringify({...answers, score}) })
+  form.style.display = 'none';
+  loadingScreen.classList.add('visible');
+  setTimeout(() => {
+    loadingScreen.classList.remove('visible');
+    successScreen.classList.add('visible');
+  }, 1500);
+}
+
+btnNext.addEventListener('click', () => {
+  if (!validateStep(currentStep)) return;
+  if (currentStep === totalSteps) {
+    submitForm();
+  } else {
+    currentStep++;
+    showStep(currentStep);
+    document.getElementById('form-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
+
+btnPrev.addEventListener('click', () => {
+  if (currentStep > 1) {
+    currentStep--;
+    showStep(currentStep);
+  }
+});
+
+showStep(1);
+
+// ===== KEYBOARD NAV =====
+document.addEventListener('keydown', (e) => {
+  if (e.target.matches('input, select, textarea')) return;
+  const scenes = Array.from(document.querySelectorAll('.scene'));
+  const current = scenes.findIndex(s => {
+    const r = s.getBoundingClientRect();
+    return r.top >= -50 && r.top < window.innerHeight / 2;
+  });
+  if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+    e.preventDefault();
+    scenes[Math.min(current + 1, scenes.length - 1)]?.scrollIntoView({ behavior: 'smooth' });
+  } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+    e.preventDefault();
+    scenes[Math.max(current - 1, 0)]?.scrollIntoView({ behavior: 'smooth' });
+  }
+});
+</script>
+</body>
+</html>
