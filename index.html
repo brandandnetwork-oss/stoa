@@ -1316,7 +1316,6 @@ h2.title em {
   <div class="scene-inner">
     <span class="eyebrow">BIENVENIDO</span>
     <h2 class="title"><em>Pensamiento sereno</em> para decisiones complejas.</h2>
-    <p class="lede" style="margin: 0 auto 28px; text-align: center;">Tu Comité quiere usar IA. Tu equipo aún no sabe cómo.<br>Stoa ocupa ese espacio. Sin hype. Con criterio.</p>
     <a href="#s4" class="btn btn-primary">Conocer Stoa</a>
   </div>
   <span class="scene-num">03 / 09</span>
@@ -1500,7 +1499,7 @@ h2.title em {
     <div>
       <span class="eyebrow">DEPARTAMENTO 01 · EDUCACIÓN</span>
       <h2 class="title">El claustro está dividido sobre la IA. <em>La dirección no puede esperar a que el consenso llegue solo.</em></h2>
-      <p class="lede">Las instituciones educativas que más van a avanzar no serán las que más debatan sobre ética de la IA. Serán las que antes establezcan un marco claro y lo apliquen.<br><br>Stoa entiende la complejidad del sector público: los tiempos de decisión, la política interna, la heterogeneidad del claustro.</p>
+      <p class="lede">Las instituciones educativas que más van a avanzar no serán las que más debatan sobre ética de la IA. Serán las que antes establezcan un marco claro y lo apliquen.<br><br>Stoa entiende la complejidad del sector público/privado: los tiempos de decisión, la política interna, la heterogeneidad del claustro.</p>
       <div class="services-list">
         <div class="service-item"><div class="service-eyebrow">FORMACIÓN · STOA INTENSIVE</div><div class="service-name">Dirección y cuerpo docente</div><div class="service-desc">Un marco común para que el equipo directivo y el claustro hablen el mismo idioma sobre IA.</div></div>
         <div class="service-item"><div class="service-eyebrow">DIAGNÓSTICO · STOA INDEX</div><div class="service-name">Madurez institucional</div><div class="service-desc">Evaluación de las seis dimensiones: estrategia, gobierno, datos, casos uso, talento y tecnología.</div></div>
@@ -1997,17 +1996,36 @@ function calculateScore() {
   return ['q1','q2','q3','q4','q5','q6'].reduce((acc, q) => acc + parseInt(answers[q] || 0), 0);
 }
 
+// Webhook de n8n que dispara IA + email + HubSpot.
+const APPS_SCRIPT_URL = 'https://brandandnetwork.app.n8n.cloud/webhook/stoa-valoracion';
+const NIVEL_LABELS = { 1: 'Inicial', 2: 'Emergente', 3: 'Definido', 4: 'Gestionado', 5: 'Optimizado' };
+function nivelDeScore(score) { return score < 13 ? 1 : score < 19 ? 2 : score < 24 ? 3 : score < 28 ? 4 : 5; }
+
 function submitForm() {
   const score = calculateScore();
-  console.log('Stoa Index Light · Score:', score, '· Nivel:', score < 13 ? '1' : score < 19 ? '2' : score < 24 ? '3' : score < 28 ? '4' : '5');
-  console.log('Respuestas:', answers);
-  // En producción: fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: JSON.stringify({...answers, score}) })
+  const nivel = nivelDeScore(score);
+  const payload = {
+    tipo: 'valoracion',
+    timestamp: new Date().toISOString(),
+    nombre: answers.nombre, empresa: answers.empresa, rol: answers.rol,
+    tamano: answers.tamano, sector: answers.sector, email: answers.email,
+    urgencia: answers.urgencia,
+    q1_madurez: answers.q1, q2_politica: answers.q2, q3_shadow_ai: answers.q3,
+    q4_prioridad: answers.q4, q5_uso_personal: answers.q5, q6_confianza: answers.q6,
+    q7_preocupacion: answers.q7,
+    q8_necesidades: Array.isArray(answers.q8) ? answers.q8.join(' · ') : (answers.q8 || ''),
+    score_total: score, nivel_num: nivel, nivel_label: NIVEL_LABELS[nivel]
+  };
   form.style.display = 'none';
   loadingScreen.classList.add('visible');
-  setTimeout(() => {
-    loadingScreen.classList.remove('visible');
-    successScreen.classList.add('visible');
-  }, 1500);
+  const finish = () => { loadingScreen.classList.remove('visible'); successScreen.classList.add('visible'); };
+  if (APPS_SCRIPT_URL) {
+    fetch(APPS_SCRIPT_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+      .then(() => setTimeout(finish, 800)).catch(() => setTimeout(finish, 800));
+  } else {
+    console.log('Stoa Index Light · payload (sin endpoint):', payload);
+    setTimeout(finish, 1200);
+  }
 }
 
 btnNext.addEventListener('click', () => {
