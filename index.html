@@ -526,7 +526,7 @@ h2.title em {
 }
 .hub-doors {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
   width: 100%;
   max-width: 1100px;
@@ -1137,6 +1137,8 @@ h2.title em {
 .dept-visual.dept-marketing,
 .dept-visual.dept-ventas,
 .dept-visual.dept-rrhh,
+.dept-visual.dept-direccion,
+.dept-visual.dept-tecnologia,
 .dept-visual.dept-operaciones {
   background-size: cover !important;
   background-position: center !important;
@@ -1149,6 +1151,8 @@ h2.title em {
 .dept-visual.dept-marketing { background-image: linear-gradient(180deg, rgba(8,24,58,0.10), rgba(8,24,58,0.42)), url('assets/escenas/06_marketing.webp'); }
 .dept-visual.dept-operaciones { background-image: linear-gradient(180deg, rgba(8,24,58,0.12), rgba(8,24,58,0.48)), url('assets/escenas/06_operaciones.webp'); }
 .dept-visual.dept-ventas { background-color: #0F2E63; background-image: linear-gradient(180deg, rgba(8,24,58,0.12), rgba(8,24,58,0.48)), url('assets/escenas/06_ventas.webp'); }
+.dept-visual.dept-direccion { background-image: linear-gradient(180deg, rgba(8,24,58,0.12), rgba(8,24,58,0.48)), url('assets/escenas/04_despacho.webp'); }
+.dept-visual.dept-tecnologia { background-image: linear-gradient(180deg, rgba(8,24,58,0.12), rgba(8,24,58,0.48)), url('assets/escenas/06_industria.webp'); }
 .dept-visual.dept-rrhh { background-color: #12284C; background-image: linear-gradient(180deg, rgba(8,24,58,0.12), rgba(8,24,58,0.48)), url('assets/escenas/06_rrhh.webp'); }
 
 /* Escena 8 · fondo ambiente del formulario (foto crema bajo la tarjeta) */
@@ -1181,14 +1185,12 @@ h2.title em {
     <div class="nav-item">
       <a href="#s5" class="nav-link">Frentes</a>
       <div class="nav-dropdown">
-        <a href="#s6-educacion">Educación</a>
-        <a href="#s6-industria">Industria</a>
-        <a href="#s6-legal">Legal</a>
-        <a href="#s6-finanzas">Finanzas</a>
+        <a href="#s6-direccion">Dirección</a>
+        <a href="#s6-rrhh">RRHH</a>
         <a href="#s6-marketing">Marketing</a>
         <a href="#s6-ventas">Ventas</a>
-        <a href="#s6-rrhh">RRHH</a>
-        <a href="#s6-operaciones">Operaciones</a>
+        <a href="#s6-financiero">Financiero</a>
+        <a href="#s6-tecnologia">Tecnología</a>
       </div>
     </div>
     <a href="#s7" class="nav-link">Valoración</a>
@@ -1211,14 +1213,12 @@ h2.title em {
   <a href="casos.html">Casos</a>
   <a href="contacto.html">Contacto</a>
   <div class="drawer-section">Frentes de trabajo</div>
-  <a href="#s6-educacion">Educación</a>
-  <a href="#s6-industria">Industria</a>
-  <a href="#s6-legal">Legal</a>
-  <a href="#s6-finanzas">Finanzas</a>
+  <a href="#s6-direccion">Dirección</a>
+  <a href="#s6-rrhh">RRHH</a>
   <a href="#s6-marketing">Marketing</a>
   <a href="#s6-ventas">Ventas</a>
-  <a href="#s6-rrhh">RRHH</a>
-  <a href="#s6-operaciones">Operaciones</a>
+  <a href="#s6-financiero">Financiero</a>
+  <a href="#s6-tecnologia">Tecnología</a>
   <a href="https://cal.com/stoa-consulting/stoa-call" class="drawer-cta" target="_blank" rel="noopener">Agendar Stoa Call →</a>
 </aside>
 
@@ -1228,7 +1228,7 @@ h2.title em {
   <a href="#s7" data-scene="2"></a>
   <a href="#s4" data-scene="3"></a>
   <a href="#s5" data-scene="4"></a>
-  <a href="#s6-educacion" data-scene="5"></a>
+  <a href="#s6-direccion" data-scene="5"></a>
   <a href="#s8" data-scene="6"></a>
   <a href="#s9" data-scene="7"></a>
 </nav>
@@ -1279,7 +1279,7 @@ h2.title em {
     <div class="cover-content">
       <img src="assets/stoa_logo.svg" class="cover-logo" alt="Stoa Consulting">
       <span class="cover-eyebrow">Formación IA para Directivos y Empresas</span>
-      <div class="cover-slogan">Más productividad.<br>Menos costes. Con criterio.</div>
+      <div class="cover-slogan" style="max-width: 34ch;">La IA no sustituirá a tus empleados.<br>Pero los que sepan utilizarla<br><em>sí marcarán la diferencia.</em></div>
       <div class="cover-cta-row">
         <a href="#s7" class="cta-enter">Entrar</a>
         <span class="cover-cta-text">Descubre en tres minutos dónde está tu empresa.</span>
@@ -1390,12 +1390,12 @@ h2.title em {
     </div>
     <div class="content-col">
       <span class="eyebrow">CASOS DE USO CON RESULTADOS</span>
-      <h1 class="display">Tu empresa necesita la IA.<br><em>Tu equipo, saber usarla.</em></h1>
+      <h1 class="display">Tu empresa necesita la IA.<br><em>Tu equipo, saber usarla correctamente.</em></h1>
       <p class="lede">Formamos a directivos y equipos para usar la IA de manera coherente y razonable: maximizar la productividad y ahorrar costes. Formación práctica, al grano, con resultados medibles.</p>
       <div class="value-bullets">
         <div class="value-bullet">
           <div class="marker">◆</div>
-          <div><h4>Formación para dirección y empleados</h4><p>Tu comité decide con criterio de experto. Cada departamento aprende lo suyo: marketing, ventas, finanzas, legal, operaciones.</p></div>
+          <div><h4>Formación para dirección y empleados</h4><p>Tu comité decide con criterio de experto. Cada departamento aprende lo suyo: Dirección, RRHH, Marketing, Ventas, Financiero y Tecnología.</p></div>
         </div>
         <div class="value-bullet">
           <div class="marker">◆</div>
@@ -1425,51 +1425,11 @@ h2.title em {
       <p class="lede" style="margin: 0 auto; text-align: center;">Formación específica para cada departamento y sector. Aprendes lo que aplica a tu trabajo, sin necesidad de conocimientos técnicos.</p>
     </div>
     <div class="hub-doors">
-      <a href="#s6-educacion" class="hub-door">
+      <a href="#s6-direccion" class="hub-door">
         <div>
-          <div class="door-icon">📖</div>
-          <h3 class="door-name">Educación</h3>
-          <p class="door-tagline">Claustros divididos.<br>Política IA todavía en papel.</p>
-        </div>
-        <span class="door-cta">Entrar →</span>
-      </a>
-      <a href="#s6-industria" class="hub-door">
-        <div>
-          <div class="door-icon">⚙</div>
-          <h3 class="door-name">Industria</h3>
-          <p class="door-tagline">Los datos están.<br>El método para extraer valor, no.</p>
-        </div>
-        <span class="door-cta">Entrar →</span>
-      </a>
-      <a href="#s6-legal" class="hub-door">
-        <div>
-          <div class="door-icon">⚖</div>
-          <h3 class="door-name">Legal</h3>
-          <p class="door-tagline">Secreto profesional y IA no tienen<br>por qué ser incompatibles.</p>
-        </div>
-        <span class="door-cta">Entrar →</span>
-      </a>
-      <a href="#s6-finanzas" class="hub-door">
-        <div>
-          <div class="door-icon">◈</div>
-          <h3 class="door-name">Finanzas</h3>
-          <p class="door-tagline">Compliance EBA primero.<br>Eficiencia, después.</p>
-        </div>
-        <span class="door-cta">Entrar →</span>
-      </a>
-      <a href="#s6-marketing" class="hub-door">
-        <div>
-          <div class="door-icon">◐</div>
-          <h3 class="door-name">Marketing</h3>
-          <p class="door-tagline">Vídeos, campañas y leads con IA.<br>Sin conocimientos técnicos.</p>
-        </div>
-        <span class="door-cta">Entrar →</span>
-      </a>
-      <a href="#s6-ventas" class="hub-door">
-        <div>
-          <div class="door-icon">◭</div>
-          <h3 class="door-name">Ventas</h3>
-          <p class="door-tagline">Más horas vendiendo.<br>Menos horas de CRM y propuestas.</p>
+          <div class="door-icon">◆</div>
+          <h3 class="door-name">Dirección</h3>
+          <p class="door-tagline">Tu Comité decide sobre IA.<br>Que decida con criterio de experto.</p>
         </div>
         <span class="door-cta">Entrar →</span>
       </a>
@@ -1477,15 +1437,39 @@ h2.title em {
         <div>
           <div class="door-icon">◉</div>
           <h3 class="door-name">RRHH</h3>
-          <p class="door-tagline">Uno de los puestos más expuestos a la IA.<br>Quien la domina, dirige.</p>
+          <p class="door-tagline">De cribar CVs a liderar<br>la adopción de IA.</p>
         </div>
         <span class="door-cta">Entrar →</span>
       </a>
-      <a href="#s6-operaciones" class="hub-door">
+      <a href="#s6-marketing" class="hub-door">
         <div>
-          <div class="door-icon">⟁</div>
-          <h3 class="door-name">Operaciones</h3>
-          <p class="door-tagline">Automatizar sin pensar tiene un precio.<br>Stoa lo calcula antes.</p>
+          <div class="door-icon">◐</div>
+          <h3 class="door-name">Marketing</h3>
+          <p class="door-tagline">Campañas, creatividades<br>y plan de medios con IA.</p>
+        </div>
+        <span class="door-cta">Entrar →</span>
+      </a>
+      <a href="#s6-ventas" class="hub-door">
+        <div>
+          <div class="door-icon">◭</div>
+          <h3 class="door-name">Ventas</h3>
+          <p class="door-tagline">Prospección, ofertas<br>y forecast con IA.</p>
+        </div>
+        <span class="door-cta">Entrar →</span>
+      </a>
+      <a href="#s6-financiero" class="hub-door">
+        <div>
+          <div class="door-icon">◈</div>
+          <h3 class="door-name">Financiero</h3>
+          <p class="door-tagline">Presupuestos, contabilidad<br>y reporting con IA.</p>
+        </div>
+        <span class="door-cta">Entrar →</span>
+      </a>
+      <a href="#s6-tecnologia" class="hub-door">
+        <div>
+          <div class="door-icon">⚙</div>
+          <h3 class="door-name">Tecnología</h3>
+          <p class="door-tagline">Desarrollo, testing<br>y agentes de IA.</p>
         </div>
         <span class="door-cta">Entrar →</span>
       </a>
@@ -1494,223 +1478,39 @@ h2.title em {
   <span class="scene-num">04 / 07</span>
 </section>
 
-<!-- ===== SCENE 6.1 · EDUCACIÓN ===== -->
-<section class="scene scene-6" id="s6-educacion">
+<!-- ===== SCENE 5.01 · DIRECCIÓN ===== -->
+<section class="scene scene-6" id="s6-direccion">
   <div class="scene-inner">
-    <div class="dept-visual dept-educacion">
-      <span class="dept-symbol">📖</span>
+    <div class="dept-visual dept-direccion">
+      <span class="dept-symbol">◆</span>
       <div class="filigree"></div>
     </div>
     <div>
-      <span class="eyebrow">DEPARTAMENTO 01 · EDUCACIÓN</span>
-      <h2 class="title">El claustro está dividido sobre la IA. <em>La dirección no puede esperar a que el consenso llegue solo.</em></h2>
-      <p class="lede">El sistema educativo tiene que adaptarse: la IA ya cambia cómo se forma, se examina y se valora. Los centros que se pongan las pilas primero marcarán la diferencia.</p>
+      <span class="eyebrow">DEPARTAMENTO 01 · DIRECCIÓN</span>
+      <h2 class="title">Tu <em>Comité de Dirección</em> ya está utilizando Inteligencia Artificial. <em>La cuestión es si la está utilizando correctamente.</em></h2>
+      <p class="lede">Nuestra formación combina un 50 % de conceptos y mejores prácticas con un 50 % de talleres prácticos, trabajando sobre casos de Empresas para que el aprendizaje pueda aplicarse desde el primer día.</p>
       <div class="benefits-eyebrow" style="margin-bottom: 4px;">Qué vas a aprender</div>
       <div class="services-list">
-        <div class="service-item"><div class="service-eyebrow">HITO 01</div><div class="service-name">Crear materiales y evaluaciones en la mitad de tiempo</div><div class="service-desc">Temarios, ejercicios, rúbricas y exámenes con IA. Sin necesidad de conocimientos técnicos.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 02</div><div class="service-name">Formar, examinar y valorar con IA</div><div class="service-desc">Adaptar tu método a los nuevos cambios: qué permitir al alumnado, qué detectar y cómo evaluar.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 03</div><div class="service-name">Alinear a dirección y claustro</div><div class="service-desc">Un lenguaje común y un marco de uso claro para todo el centro, aprobable por sus órganos de gobierno.</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 01</div><div class="service-name">Tendencias IA en tu sector</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 02</div><div class="service-name">IA para el Comité de Dirección</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 03</div><div class="service-name">IA para el Director de RRHH</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 04</div><div class="service-name">IA para el Director de Marketing</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 05</div><div class="service-name">IA para el Director de Ventas</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 06</div><div class="service-name">IA para el Director Financiero</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 07</div><div class="service-name">IA para CTOs y CIOs</div></div>
       </div>
-      <div class="benefits-block">
-        <div class="benefits-eyebrow">Qué gana tu institución</div>
-        <div class="benefits-list">
-        <div class="benefit-item"><strong>Claustro alineado.</strong> Dirección y docentes salen de la formación con un marco y un lenguaje común: el debate deja de ser circular y las decisiones avanzan.</div>
-        <div class="benefit-item"><strong>Criterio propio para decidir.</strong> El equipo directivo aprende a evaluar herramientas y propuestas sin depender del proveedor de turno.</div>
-        <div class="benefit-item"><strong>Uso ordenado desde el primer trimestre.</strong> Una política que profesorado y alumnado saben aplicar. El riesgo reputacional se acota antes del incidente, no después.</div>
-        </div>
-      </div>
-      <div class="dept-quote">"No te distraigas con lo que no puedes controlar. Fija el marco de lo que sí puedes."<span class="dept-quote-author">— Marco Aurelio</span></div>
-      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Centro universitario con 3.200 alumnos: política IA aprobada en consejo en 11 semanas. Cero incidentes de uso indebido en el año siguiente.</div>
+      <div class="dept-quote">"Si no sabes a qué puerto navegas, ningún viento es favorable."<span class="dept-quote-author">— Séneca</span></div>
+      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Comité de dirección de empresa industrial, 9 miembros: dos días de formación y plan director de IA aprobado en 6 semanas.</div>
       <div class="dept-ctas" style="margin-top: 24px;">
         <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
         <a href="#s8" class="btn btn-primary">Comenzar mi valoración →</a>
       </div>
     </div>
   </div>
-  <span class="scene-num">05 · 01 / 08</span>
+  <span class="scene-num">05 · 01 / 06</span>
 </section>
 
-<!-- ===== SCENE 6.2 · INDUSTRIA ===== -->
-<section class="scene scene-6" id="s6-industria">
-  <div class="scene-inner">
-    <div class="dept-visual dept-industria">
-      <span class="dept-symbol">⚙</span>
-      <div class="filigree"></div>
-    </div>
-    <div>
-      <span class="eyebrow">DEPARTAMENTO 02 · INDUSTRIA</span>
-      <h2 class="title">Tienes los datos. <em>Lo que falta es el método para convertirlos en decisiones.</em></h2>
-      <p class="lede">Tu empresa acumula años de datos de producción, mantenimiento y cadena de suministro. Te enseñamos a convertirlos en decisiones y ahorro, empezando por lo que tiene retorno este año.</p>
-      <div class="benefits-eyebrow" style="margin-bottom: 4px;">Qué vas a aprender</div>
-      <div class="services-list">
-        <div class="service-item"><div class="service-eyebrow">HITO 01</div><div class="service-name">Convertir tus datos de planta en decisiones</div><div class="service-desc">Preguntar bien a tus propios datos: producción, calidad, mantenimiento. Sin perfil técnico.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 02</div><div class="service-name">Automatizar informes y documentación</div><div class="service-desc">Partes, ofertas, revisión de planos y documentación técnica en una fracción del tiempo.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 03</div><div class="service-name">Evaluar propuestas con criterio propio</div><div class="service-desc">Saber qué caso de uso tiene retorno real y cuál es humo, antes de firmar con ningún proveedor.</div></div>
-      </div>
-      <div class="benefits-block">
-        <div class="benefits-eyebrow">Qué gana tu organización</div>
-        <div class="benefits-list">
-        <div class="benefit-item"><strong>Prioridades claras.</strong> El diagnóstico convierte intuiciones en un mapa: qué datos tienes, qué capacidades faltan y por dónde empezar.</div>
-        <div class="benefit-item"><strong>Tres casos con retorno estimado.</strong> Cada caso sale del Sprint con sponsor, métricas y viabilidad calculada. Inversión dimensionada, no sobredimensionada.</div>
-        <div class="benefit-item"><strong>Ejecución que no se diluye.</strong> El seguimiento trimestral con el Comité mantiene el rumbo cuando la operación aprieta.</div>
-        </div>
-      </div>
-      <div class="dept-quote">"No actúes como si fueras a vivir diez mil años. Actúa ahora, sobre lo que tienes delante."<span class="dept-quote-author">— Marco Aurelio</span></div>
-      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Empresa de ingeniería industrial, 187 empleados: dos casos uso implementados en 8 semanas. Reducción del 23% en tiempo de revisión de planos. Plan anual aprobado por 280.000 €.</div>
-      <div class="dept-ctas" style="margin-top: 24px;">
-        <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
-        <a href="#s8" class="btn btn-primary">Comenzar mi valoración →</a>
-      </div>
-    </div>
-  </div>
-  <span class="scene-num">05 · 02 / 08</span>
-</section>
-
-<!-- ===== SCENE 6.3 · LEGAL ===== -->
-<section class="scene scene-6" id="s6-legal">
-  <div class="scene-inner">
-    <div class="dept-visual dept-legal">
-      <span class="dept-symbol">⚖</span>
-      <div class="filigree"></div>
-    </div>
-    <div>
-      <span class="eyebrow">DEPARTAMENTO 03 · LEGAL</span>
-      <h2 class="title">El secreto profesional no es un argumento contra la IA. <em>Es el punto de partida para usarla bien.</em></h2>
-      <p class="lede">La mayoría de despachos ya usa IA — y la mayoría la usa mal, o paga licencias que no necesita. Te enseñamos a usarla bien, en tu propio entorno, protegiendo el secreto profesional.</p>
-      <div class="benefits-eyebrow" style="margin-bottom: 4px;">Qué vas a aprender</div>
-      <div class="services-list">
-        <div class="service-item"><div class="service-eyebrow">HITO 01</div><div class="service-name">Redactar, revisar y comparar documentos con IA</div><div class="service-desc">Due diligence, document review y contratos supervisados: menos horas mecánicas, más criterio.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 02</div><div class="service-name">Trabajar en tu propio entorno seguro</div><div class="service-desc">Montar IA en el entorno del despacho sin pagar licencias infladas de herramientas verticales.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 03</div><div class="service-name">Proteger datos de cliente por diseño</div><div class="service-desc">Qué datos pueden entrar, con qué herramienta y en qué contexto. Sin ambigüedades.</div></div>
-      </div>
-      <div class="benefits-block">
-        <div class="benefits-eyebrow">Qué gana tu despacho</div>
-        <div class="benefits-list">
-        <div class="benefit-item"><strong>Socios sin ambigüedad.</strong> Tras la formación, cada abogado sabe qué herramienta usar, con qué datos y en qué contexto. El secreto profesional queda protegido por diseño.</div>
-        <div class="benefit-item"><strong>Protocolo defendible.</strong> Ante el cliente, el colegio y la aseguradora de responsabilidad civil. Por escrito y aprobado.</div>
-        <div class="benefit-item"><strong>Horas recuperadas.</strong> Due diligence y document review con IA supervisada: menos horas junior en tareas mecánicas, más horas en criterio.</div>
-        </div>
-      </div>
-      <div class="dept-quote">"Lo que no es bueno para el enjambre no es bueno para la abeja."<span class="dept-quote-author">— Marco Aurelio</span></div>
-      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Despacho boutique mercantil, 10 empleados: política IA aprobada y 2 casos uso en producción en 8 semanas. Stoa Index: de 1,9 a 2,8. Stoa Continuum contratado a continuación.</div>
-      <div class="dept-ctas" style="margin-top: 24px;">
-        <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
-        <a href="#s8" class="btn btn-primary">Comenzar mi valoración →</a>
-      </div>
-    </div>
-  </div>
-  <span class="scene-num">05 · 03 / 08</span>
-</section>
-
-<!-- ===== SCENE 6.4 · FINANZAS ===== -->
-<section class="scene scene-6" id="s6-finanzas">
-  <div class="scene-inner">
-    <div class="dept-visual dept-finanzas">
-      <span class="dept-symbol">◈</span>
-      <div class="filigree"></div>
-    </div>
-    <div>
-      <span class="eyebrow">DEPARTAMENTO 04 · FINANZAS</span>
-      <h2 class="title">El supervisor ya ha publicado su guía. <em>Tu comité todavía no tiene respuesta.</em></h2>
-      <p class="lede">Cierres, previsiones, reporting: el departamento financiero es donde la IA ahorra más horas con menos riesgo. Te enseñamos a capturar ese ahorro sin perder el control.</p>
-      <div class="benefits-eyebrow" style="margin-bottom: 4px;">Qué vas a aprender</div>
-      <div class="services-list">
-        <div class="service-item"><div class="service-eyebrow">HITO 01</div><div class="service-name">Automatizar reporting y análisis</div><div class="service-desc">Informes de gestión, conciliaciones y análisis de desviaciones en horas, no en semanas.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 02</div><div class="service-name">Hacer previsiones con IA</div><div class="service-desc">Forecast y escenarios sobre tus propios datos. Tú decides, la IA calcula.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 03</div><div class="service-name">Responder ante el regulador</div><div class="service-desc">Qué exigen EBA, Banco de España y el AI Act, y cómo tener una posición defendible.</div></div>
-      </div>
-      <div class="benefits-block">
-        <div class="benefits-eyebrow">Qué gana tu entidad</div>
-        <div class="benefits-list">
-        <div class="benefit-item"><strong>Respuesta ante el supervisor.</strong> Inventario de sistemas, clasificación de riesgo y política aprobada: posición defendible ante EBA, EIOPA y Banco de España.</div>
-        <div class="benefit-item"><strong>Un Comité que decide con criterio propio.</strong> Dos días de formación que ahorran años de dependencia de vendors y consultoras.</div>
-        <div class="benefit-item"><strong>Posición viva, no un PDF.</strong> La revisión trimestral mantiene al Comité por delante del calendario regulatorio, no a remolque.</div>
-        </div>
-      </div>
-      <div class="dept-quote">"El primer paso hacia la prudencia es conocer el terreno."<span class="dept-quote-author">— Zenón de Citio</span></div>
-      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Gestora patrimonial de banca privada: política IA compatible con EBA Guidelines on ICT Risk aprobada por consejo en 12 semanas.</div>
-      <div class="dept-ctas" style="margin-top: 24px;">
-        <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
-        <a href="#s8" class="btn btn-primary">Comenzar mi valoración →</a>
-      </div>
-    </div>
-  </div>
-  <span class="scene-num">05 · 04 / 08</span>
-</section>
-
-<!-- ===== SCENE 6.5 · MARKETING ===== -->
-<section class="scene scene-6" id="s6-marketing">
-  <div class="scene-inner">
-    <div class="dept-visual dept-marketing">
-      <span class="dept-symbol">◐</span>
-      <div class="filigree"></div>
-    </div>
-    <div>
-      <span class="eyebrow">DEPARTAMENTO 05 · MARKETING</span>
-      <h2 class="title">Tu equipo ya usa IA con datos de clientes. <em>Probablemente sin que nadie lo haya autorizado.</em></h2>
-      <p class="lede">Tu equipo ya prueba cosas con IA por su cuenta. Te enseñamos a hacerlo bien: producir más, personalizar a escala y medir el retorno de cada pieza.</p>
-      <div class="benefits-eyebrow" style="margin-bottom: 4px;">Qué vas a aprender</div>
-      <div class="services-list">
-        <div class="service-item"><div class="service-eyebrow">HITO 01</div><div class="service-name">Crear vídeos, imágenes, música y campañas completas</div><div class="service-desc">Producción de contenidos a nivel profesional, sin necesidad de conocimientos técnicos.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 02</div><div class="service-name">Gestionar leads y personalizar a escala</div><div class="service-desc">Captación, cualificación y seguimiento de leads con IA. Cada cliente, un mensaje.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 03</div><div class="service-name">Medir el retorno desde el día uno</div><div class="service-desc">Qué produce cada contenido y cada campaña. El retorno se demuestra, no se intuye.</div></div>
-      </div>
-      <div class="benefits-block">
-        <div class="benefits-eyebrow">Qué gana tu equipo</div>
-        <div class="benefits-list">
-        <div class="benefit-item"><strong>Exposición conocida y acotada.</strong> La auditoría aflora el shadow AI sin frenar al equipo: se ordena lo que ya está ocurriendo.</div>
-        <div class="benefit-item"><strong>Más producción con menos riesgo.</strong> Herramientas aprobadas, datos delimitados y revisión humana definida: el equipo acelera con red.</div>
-        <div class="benefit-item"><strong>Productividad medida desde el día uno.</strong> Los tres casos de uso arrancan con métricas. El retorno se demuestra, no se intuye.</div>
-        </div>
-      </div>
-      <div class="dept-quote">"Nada es tan empobrecedor como la prisa irreflexiva."<span class="dept-quote-author">— Séneca</span></div>
-      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Departamento de marketing in-house, empresa de consumo, 45 personas: auditoría Shadow AI completada en 2 semanas. Protocolo aprobado.</div>
-      <div class="dept-ctas" style="margin-top: 24px;">
-        <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
-        <a href="#s8" class="btn btn-primary">Comenzar mi valoración →</a>
-      </div>
-    </div>
-  </div>
-  <span class="scene-num">05 · 05 / 08</span>
-</section>
-
-<!-- ===== SCENE 6.6 · VENTAS ===== -->
-<section class="scene scene-6" id="s6-ventas">
-  <div class="scene-inner">
-    <div class="dept-visual dept-ventas">
-      <span class="dept-symbol">◭</span>
-      <div class="filigree"></div>
-    </div>
-    <div>
-      <span class="eyebrow">DEPARTAMENTO 06 · VENTAS</span>
-      <h2 class="title">Tus comerciales saben vender. <em>La IA les quita todo lo demás.</em></h2>
-      <p class="lede">Propuestas, seguimiento, CRM, forecast: media jornada comercial no es vender. Te enseñamos a devolver esas horas a la venta.</p>
-      <div class="benefits-eyebrow" style="margin-bottom: 4px;">Qué vas a aprender</div>
-      <div class="services-list">
-        <div class="service-item"><div class="service-eyebrow">HITO 01</div><div class="service-name">Gestionar leads y oportunidades con IA</div><div class="service-desc">Cualificar, priorizar y hacer seguimiento sin que se escape nada. Cada lead, su siguiente paso.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 02</div><div class="service-name">Hacer el forecast en horas, no en días</div><div class="service-desc">Previsión de ventas sobre tu pipeline real. Escenarios que puedes defender ante dirección.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 03</div><div class="service-name">Preparar visitas y propuestas al instante</div><div class="service-desc">Dossier del cliente, propuesta a medida y correo de seguimiento en minutos. Sin conocimientos técnicos.</div></div>
-      </div>
-      <div class="benefits-block">
-        <div class="benefits-eyebrow">Qué gana tu equipo comercial</div>
-        <div class="benefits-list">
-        <div class="benefit-item"><strong>Más horas delante del cliente.</strong> Lo mecánico lo hace la IA; el comercial vuelve a vender.</div>
-        <div class="benefit-item"><strong>Un forecast en el que confiar.</strong> Previsión continua sobre datos reales, no una hoja que se rellena a final de mes.</div>
-        <div class="benefit-item"><strong>Propuestas consistentes.</strong> Toda la red comercial propone con la misma calidad, del senior al recién llegado.</div>
-        </div>
-      </div>
-      <div class="dept-quote">"La suerte es lo que sucede cuando la preparación se encuentra con la oportunidad."<span class="dept-quote-author">— Séneca</span></div>
-      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Equipo comercial B2B, 12 personas: preparación de propuestas de 3 horas a 20 minutos. Forecast semanal automatizado sobre el CRM existente.</div>
-      <div class="dept-ctas" style="margin-top: 24px;">
-        <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
-        <a href="#s8" class="btn btn-primary">Comenzar mi valoración →</a>
-      </div>
-    </div>
-  </div>
-  <span class="scene-num">05 · 06 / 08</span>
-</section>
-
-<!-- ===== SCENE 6.7 · RRHH ===== -->
+<!-- ===== SCENE 5.02 · RRHH ===== -->
 <section class="scene scene-6" id="s6-rrhh">
   <div class="scene-inner">
     <div class="dept-visual dept-rrhh">
@@ -1718,22 +1518,17 @@ h2.title em {
       <div class="filigree"></div>
     </div>
     <div>
-      <span class="eyebrow">DEPARTAMENTO 07 · RRHH</span>
-      <h2 class="title">RRHH es de los puestos más expuestos a la IA. <em>Quien la domina no sobra: dirige.</em></h2>
-      <p class="lede">Cribado, onboarding, formación interna, gestión documental: gran parte del trabajo de RRHH es automatizable. La cuestión es si lo automatiza tu equipo o alguien por ti.</p>
+      <span class="eyebrow">DEPARTAMENTO 02 · RRHH</span>
+      <h2 class="title">Tu equipo de RRHH ya está utilizando Inteligencia Artificial. <em>La cuestión es si la está utilizando correctamente.</em></h2>
+      <p class="lede">Nuestra formación combina un 50 % de conceptos y mejores prácticas con un 50 % de talleres prácticos, trabajando sobre casos de RRHH para que el aprendizaje pueda aplicarse desde el primer día.</p>
       <div class="benefits-eyebrow" style="margin-bottom: 4px;">Qué vas a aprender</div>
       <div class="services-list">
-        <div class="service-item"><div class="service-eyebrow">HITO 01</div><div class="service-name">Cribar y evaluar candidaturas con IA</div><div class="service-desc">De cientos de CVs a una shortlist argumentada en horas. Con criterios trazables y sin sesgos ocultos.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 02</div><div class="service-name">Automatizar onboarding y formación interna</div><div class="service-desc">Manuales, itinerarios formativos y respuestas a las preguntas frecuentes de la plantilla.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 03</div><div class="service-name">Liderar la adopción de IA en la plantilla</div><div class="service-desc">RRHH como motor del cambio: plan de adopción, formación por departamentos y gestión del miedo al reemplazo.</div></div>
-      </div>
-      <div class="benefits-block">
-        <div class="benefits-eyebrow">Qué gana tu departamento</div>
-        <div class="benefits-list">
-        <div class="benefit-item"><strong>Horas recuperadas cada semana.</strong> Lo administrativo se automatiza; el tiempo vuelve a las personas.</div>
-        <div class="benefit-item"><strong>Mejores contrataciones, más rápido.</strong> Procesos de selección más cortos sin bajar el listón.</div>
-        <div class="benefit-item"><strong>Un rol estratégico.</strong> RRHH deja de ser el último en enterarse de la IA y pasa a dirigir su adopción.</div>
-        </div>
+        <div class="service-item"><div class="service-eyebrow">HITO 01</div><div class="service-name">Planificación de plantillas y necesidades de personal con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 02</div><div class="service-name">Reclutamiento de talento con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 03</div><div class="service-name">Cribado de CVs con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 04</div><div class="service-name">Preparación y gestión de entrevistas con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 05</div><div class="service-name">Formación y desarrollo profesional con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 06</div><div class="service-name">Comunicación interna y políticas de RRHH con IA</div></div>
       </div>
       <div class="dept-quote">"El impedimento para la acción impulsa la acción. Lo que se interpone en el camino se convierte en el camino."<span class="dept-quote-author">— Marco Aurelio</span></div>
       <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Departamento de RRHH, empresa de 400 empleados: cribado inicial de 6 días a 1. Onboarding documentado y automatizado en 4 semanas.</div>
@@ -1743,43 +1538,130 @@ h2.title em {
       </div>
     </div>
   </div>
-  <span class="scene-num">05 · 07 / 08</span>
+  <span class="scene-num">05 · 02 / 06</span>
 </section>
 
-<!-- ===== SCENE 6.6 · OPERACIONES ===== -->
-<section class="scene scene-6" id="s6-operaciones">
+<!-- ===== SCENE 5.03 · MARKETING ===== -->
+<section class="scene scene-6" id="s6-marketing">
   <div class="scene-inner">
-    <div class="dept-visual dept-operaciones">
-      <span class="dept-symbol">⟁</span>
+    <div class="dept-visual dept-marketing">
+      <span class="dept-symbol">◐</span>
       <div class="filigree"></div>
     </div>
     <div>
-      <span class="eyebrow">DEPARTAMENTO 08 · OPERACIONES</span>
-      <h2 class="title">Automatizar un proceso roto no lo arregla. <em>Lo hace roto más deprisa.</em></h2>
-      <p class="lede">La presión por automatizar es real. Te enseñamos a distinguir qué procesos merecen IA, en qué orden, y a eliminar las horas de trabajo mecánico de tu equipo.</p>
+      <span class="eyebrow">DEPARTAMENTO 03 · MARKETING</span>
+      <h2 class="title">Tu equipo de Marketing ya está utilizando Inteligencia Artificial. <em>La cuestión es si la está utilizando correctamente.</em></h2>
+      <p class="lede">Nuestra formación combina un 50 % de conceptos y mejores prácticas con un 50 % de talleres prácticos, trabajando sobre casos de Marketing para que el aprendizaje pueda aplicarse desde el primer día.</p>
       <div class="benefits-eyebrow" style="margin-bottom: 4px;">Qué vas a aprender</div>
       <div class="services-list">
-        <div class="service-item"><div class="service-eyebrow">HITO 01</div><div class="service-name">Identificar qué automatizar y qué no</div><div class="service-desc">Priorizar procesos por impacto y viabilidad. Primero rediseño, después IA.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 02</div><div class="service-name">Eliminar horas de tareas mecánicas</div><div class="service-desc">Pedidos, incidencias, documentación y comunicación interna con IA. Horas que vuelven al equipo.</div></div>
-        <div class="service-item"><div class="service-eyebrow">HITO 03</div><div class="service-name">Medir el ahorro real</div><div class="service-desc">Cuánto cuesta, cuánto ahorra y en cuánto tiempo se paga cada automatización.</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 01</div><div class="service-name">Analizar mejor el mercado con IA</div><div class="service-desc">Análisis de la competencia, de precios, de canales de venta y de clientes.</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 02</div><div class="service-name">Definición de nuevos productos con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 03</div><div class="service-name">Mejores presentaciones con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 04</div><div class="service-name">Definición de campañas con IA</div><div class="service-desc">Creatividades: logo, claims, música, imágenes y vídeos de campaña.</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 05</div><div class="service-name">Definición del plan de medios con IA</div><div class="service-desc">Medios online, redes sociales (Instagram, TikTok, YouTube, LinkedIn…), SEM y offline. Seguimiento mensual y reporting.</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 06</div><div class="service-name">Gestión del presupuesto de Marketing con IA</div></div>
       </div>
-      <div class="benefits-block">
-        <div class="benefits-eyebrow">Qué gana tu operación</div>
-        <div class="benefits-list">
-        <div class="benefit-item"><strong>Los procesos correctos, en el orden correcto.</strong> El diagnóstico evita automatizar procesos rotos: primero rediseño, después IA.</div>
-        <div class="benefit-item"><strong>Retorno demostrable en el año uno.</strong> Tres casos seleccionados por impacto y viabilidad, no por moda. Con sponsor y métricas desde el inicio.</div>
-        <div class="benefit-item"><strong>Adopción que se sostiene.</strong> Revisión trimestral con el Comité: los resultados reales ajustan la hoja de ruta, no las promesas.</div>
-        </div>
-      </div>
-      <div class="dept-quote">"La diferencia entre el hombre sabio y el impulsivo no está en la velocidad: está en saber cuándo parar."<span class="dept-quote-author">— Marco Aurelio</span></div>
-      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Empresa logística, 340 empleados: tres procesos evaluados. Uno descartado. Dos en producción en 10 semanas. Ahorro: 1.200 horas/año.</div>
+      <div class="dept-quote">"Nada es tan empobrecedor como la prisa irreflexiva."<span class="dept-quote-author">— Séneca</span></div>
+      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Departamento de marketing in-house, empresa de consumo, 45 personas: auditoría de uso de IA completada en 2 semanas. Protocolo aprobado.</div>
       <div class="dept-ctas" style="margin-top: 24px;">
         <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
         <a href="#s8" class="btn btn-primary">Comenzar mi valoración →</a>
       </div>
     </div>
   </div>
-  <span class="scene-num">05 · 08 / 08</span>
+  <span class="scene-num">05 · 03 / 06</span>
+</section>
+
+<!-- ===== SCENE 5.04 · VENTAS ===== -->
+<section class="scene scene-6" id="s6-ventas">
+  <div class="scene-inner">
+    <div class="dept-visual dept-ventas">
+      <span class="dept-symbol">◭</span>
+      <div class="filigree"></div>
+    </div>
+    <div>
+      <span class="eyebrow">DEPARTAMENTO 04 · VENTAS</span>
+      <h2 class="title">Tu equipo de Ventas ya está utilizando Inteligencia Artificial. <em>La cuestión es si la está utilizando correctamente.</em></h2>
+      <p class="lede">Nuestra formación combina un 50 % de conceptos y mejores prácticas con un 50 % de talleres prácticos, trabajando sobre casos de Ventas para que el aprendizaje pueda aplicarse desde el primer día.</p>
+      <div class="benefits-eyebrow" style="margin-bottom: 4px;">Qué vas a aprender</div>
+      <div class="services-list">
+        <div class="service-item"><div class="service-eyebrow">HITO 01</div><div class="service-name">Mejorar la prospección e investigación de clientes con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 02</div><div class="service-name">Presentaciones comerciales y ofertas con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 03</div><div class="service-name">Redacción de emails comerciales con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 04</div><div class="service-name">Seguimiento de oportunidades con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 05</div><div class="service-name">Forecast y predicción de ventas con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 06</div><div class="service-name">Análisis comercial y mejora continua con IA</div></div>
+      </div>
+      <div class="dept-quote">"La suerte es lo que sucede cuando la preparación se encuentra con la oportunidad."<span class="dept-quote-author">— Séneca</span></div>
+      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Equipo comercial B2B, 12 personas: preparación de propuestas de 3 horas a 20 minutos. Forecast semanal automatizado sobre el CRM existente.</div>
+      <div class="dept-ctas" style="margin-top: 24px;">
+        <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
+        <a href="#s8" class="btn btn-primary">Comenzar mi valoración →</a>
+      </div>
+    </div>
+  </div>
+  <span class="scene-num">05 · 04 / 06</span>
+</section>
+
+<!-- ===== SCENE 5.05 · FINANCIERO ===== -->
+<section class="scene scene-6" id="s6-financiero">
+  <div class="scene-inner">
+    <div class="dept-visual dept-finanzas">
+      <span class="dept-symbol">◈</span>
+      <div class="filigree"></div>
+    </div>
+    <div>
+      <span class="eyebrow">DEPARTAMENTO 05 · FINANCIERO</span>
+      <h2 class="title">Tu equipo Financiero ya está utilizando Inteligencia Artificial. <em>La cuestión es si la está utilizando correctamente.</em></h2>
+      <p class="lede">Nuestra formación combina un 50 % de conceptos y mejores prácticas con un 50 % de talleres prácticos, trabajando sobre casos de Finanzas para que el aprendizaje pueda aplicarse desde el primer día.</p>
+      <div class="benefits-eyebrow" style="margin-bottom: 4px;">Qué vas a aprender</div>
+      <div class="services-list">
+        <div class="service-item"><div class="service-eyebrow">HITO 01</div><div class="service-name">Administración con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 02</div><div class="service-name">Presupuestos y planificación financiera con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 03</div><div class="service-name">Contabilidad inteligente con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 04</div><div class="service-name">Reporting para Dirección con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 05</div><div class="service-name">Automatización del departamento financiero con IA</div></div>
+      </div>
+      <div class="dept-quote">"El primer paso hacia la prudencia es conocer el terreno."<span class="dept-quote-author">— Zenón de Citio</span></div>
+      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Departamento financiero de gestora patrimonial: cierre mensual y reporting para consejo preparados en un tercio del tiempo.</div>
+      <div class="dept-ctas" style="margin-top: 24px;">
+        <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
+        <a href="#s8" class="btn btn-primary">Comenzar mi valoración →</a>
+      </div>
+    </div>
+  </div>
+  <span class="scene-num">05 · 05 / 06</span>
+</section>
+
+<!-- ===== SCENE 5.06 · TECNOLOGÍA ===== -->
+<section class="scene scene-6" id="s6-tecnologia">
+  <div class="scene-inner">
+    <div class="dept-visual dept-tecnologia">
+      <span class="dept-symbol">⚙</span>
+      <div class="filigree"></div>
+    </div>
+    <div>
+      <span class="eyebrow">DEPARTAMENTO 06 · TECNOLOGÍA</span>
+      <h2 class="title">Tu equipo de Tecnología ya está utilizando Inteligencia Artificial. <em>La cuestión es si la está utilizando correctamente.</em></h2>
+      <p class="lede">Nuestra formación combina un 50 % de conceptos y mejores prácticas con un 50 % de talleres prácticos, trabajando sobre casos de Tecnología para que el aprendizaje pueda aplicarse desde el primer día.</p>
+      <div class="benefits-eyebrow" style="margin-bottom: 4px;">Qué vas a aprender</div>
+      <div class="services-list">
+        <div class="service-item"><div class="service-eyebrow">HITO 01</div><div class="service-name">Análisis funcional y definición de requisitos con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 02</div><div class="service-name">Desarrollo de software asistido por IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 03</div><div class="service-name">Revisión de código y calidad del software con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 04</div><div class="service-name">Testing automatizado con IA</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 05</div><div class="service-name">Automatización mediante agentes de IA: tendencias</div></div>
+        <div class="service-item"><div class="service-eyebrow">HITO 06</div><div class="service-name">Automatización mediante agentes de IA: casos prácticos</div></div>
+      </div>
+      <div class="dept-quote">"No expliques tu filosofía. Encárnala."<span class="dept-quote-author">— Epicteto</span></div>
+      <div class="case-illustrative"><strong>Caso ilustrativo:</strong> Equipo de desarrollo, 14 personas: tiempo de entrega de nuevas funcionalidades reducido un 30 % con desarrollo asistido y testing automatizado.</div>
+      <div class="dept-ctas" style="margin-top: 24px;">
+        <a href="#s5" class="btn btn-ghost">← Volver al hub</a>
+        <a href="#s8" class="btn btn-primary">Comenzar mi valoración →</a>
+      </div>
+    </div>
+  </div>
+  <span class="scene-num">05 · 06 / 06</span>
 </section>
 
 <!-- ===== SCENE 8 · FORMULARIO ===== -->
@@ -1911,7 +1793,7 @@ h2.title em {
             <div><label for="tamano">Tamaño empresa</label><select id="tamano" name="tamano" required><option value="">Selecciona…</option><option value="<10">Menos de 10</option><option value="10-50">10-50</option><option value="50-250">50-250</option><option value="250-1000">250-1.000</option><option value=">1000">Más de 1.000</option></select></div>
           </div></div>
           <div class="text-field"><div class="field-grid">
-            <div><label for="sector">Sector</label><select id="sector" name="sector" required><option value="">Selecciona…</option><option value="Educacion">Educación</option><option value="Industria">Industria</option><option value="Legal">Legal</option><option value="Finanzas">Finanzas</option><option value="Marketing">Marketing</option><option value="Ventas">Ventas</option><option value="RRHH">RRHH</option><option value="Operaciones">Operaciones</option><option value="Otro">Otro</option></select></div>
+            <div><label for="sector">Sector</label><select id="sector" name="sector" required><option value="">Selecciona…</option><option value="Direccion">Dirección</option><option value="RRHH">RRHH</option><option value="Marketing">Marketing</option><option value="Ventas">Ventas</option><option value="Financiero">Financiero</option><option value="Tecnologia">Tecnología</option><option value="Otro">Otro</option></select></div>
             <div><label for="urgencia">Urgencia</label><select id="urgencia" name="urgencia"><option value="">Sin prisa</option><option value="semana">Esta semana</option><option value="proxima">La próxima</option><option value="mes">Este mes</option></select></div>
           </div></div>
           <div class="text-field"><label for="email">Email corporativo</label><input type="email" id="email" name="email" required></div>
@@ -1979,14 +1861,12 @@ h2.title em {
     </div>
     <div class="footer-col">
       <span class="eyebrow">Frentes de trabajo</span>
-      <a href="#s6-educacion">Educación</a>
-      <a href="#s6-industria">Industria</a>
-      <a href="#s6-legal">Legal</a>
-      <a href="#s6-finanzas">Finanzas</a>
+      <a href="#s6-direccion">Dirección</a>
+      <a href="#s6-rrhh">RRHH</a>
       <a href="#s6-marketing">Marketing</a>
       <a href="#s6-ventas">Ventas</a>
-      <a href="#s6-rrhh">RRHH</a>
-      <a href="#s6-operaciones">Operaciones</a>
+      <a href="#s6-financiero">Financiero</a>
+      <a href="#s6-tecnologia">Tecnología</a>
     </div>
     <div class="footer-col">
       <span class="eyebrow">Contacto</span>
