@@ -1,0 +1,20 @@
+# Stoa Consulting · control de caché
+# HTML: nunca cachear en CDN/navegador → los cambios se ven al momento
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  # Assets: caché larga (van versionados con ?v=)
+  <FilesMatch "\.(css|js|webp|png|jpg|svg|woff2?)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>
+
+# index.html como página por defecto
+DirectoryIndex index.html
+
+# Redirigir raíz sin caché heredada (evita servir copias antiguas de "/")
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>

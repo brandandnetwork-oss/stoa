@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Política de cookies · Stoa Consulting</title>
-<meta name="description" content="Qué cookies utiliza el sitio web de Stoa Consulting, para qué sirven y cómo gestionarlas.">
+<title>Política de privacidad · Stoa Consulting</title>
+<meta name="description" content="Cómo trata Stoa Consulting S.L. los datos personales recabados a través de su sitio web, conforme al RGPD y la LOPDGDD.">
 <meta name="robots" content="noindex, follow">
 <meta name="theme-color" content="#08183A">
-<link rel="canonical" href="https://www.stoa.consulting/cookies.html">
+<link rel="canonical" href="https://www.stoa.consulting/privacidad.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2308183A'/%3E%3Ctext x='16' y='23' font-size='18' fill='%23D4B68E' text-anchor='middle' font-family='serif'%3E%E2%97%86%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@
     <img src="assets/stoa_logo.svg" class="brand-logo" alt="Stoa Consulting · Formación IA para Directivos y Empresas">
   </a>
   <nav class="site-nav" aria-label="Navegación principal">
-    <a href="programas.html" class="nav-link">Formación</a>
+    <a href="index.html#departamentos" class="nav-link">Formación</a>
     <div class="nav-item">
       <a href="index.html#departamentos" class="nav-link">Frentes</a>
       <div class="nav-dropdown">
@@ -49,7 +49,7 @@
 <div class="drawer-overlay"></div>
 <aside class="drawer" aria-label="Menú móvil">
   <button class="drawer-close" aria-label="Cerrar menú">&times;</button>
-  <a href="programas.html">Formación</a>
+  <a href="index.html#departamentos">Formación</a>
   <a href="index.html#valoracion">Valoración</a>
   <a href="casos.html">Casos</a>
   <a href="contacto.html">Contacto</a>
@@ -66,49 +66,71 @@
 <!-- ===== HERO ===== -->
 <section class="page-hero">
   <span class="eyebrow">Información legal</span>
-  <h1>Política de cookies</h1>
-  <p class="hero-lede">Usamos las cookies justas: las imprescindibles para que el sitio funcione y, solo con tu permiso, analítica anónima. Aquí te explicamos cuáles, para qué y cómo controlarlas.</p>
+  <h1>Política de privacidad</h1>
+  <p class="hero-lede">Tratamos tus datos con el mismo criterio con el que asesoramos: lo justo, con una finalidad clara y bajo tu control. Esta política explica cómo y por qué, conforme al RGPD (UE 2016/679) y la LOPDGDD (3/2018).</p>
 </section>
 
 <!-- ===== CUERPO ===== -->
 <div class="page-body">
   <p class="updated">Última actualización: junio de 2026.</p>
 
-  <h2>1. ¿Qué es una cookie?</h2>
-  <p>Una cookie es un pequeño archivo de texto que un sitio web almacena en tu navegador cuando lo visitas. Sirve para que el sitio recuerde información sobre tu visita, como tus preferencias, lo que facilita la siguiente vez que vuelves y hace el sitio más útil. Tecnologías similares (como el almacenamiento local del navegador) reciben el mismo tratamiento en esta política.</p>
+  <h2>1. Responsable del tratamiento</h2>
+  <p>El responsable del tratamiento de tus datos personales es:</p>
+  <ul>
+    <li><strong>Responsable:</strong> Stoa Consulting S.L.</li>
+    <li><strong>NIF:</strong> [pendiente de completar]</li>
+    <li><strong>Domicilio:</strong> [dirección pendiente de completar], Madrid, España</li>
+    <li><strong>Correo de contacto en materia de privacidad:</strong> <a href="mailto:hello@stoa.consulting">hello@stoa.consulting</a></li>
+  </ul>
+  <div class="callout"><strong>Aviso al editor:</strong> completa el NIF, el domicilio y, si designas un delegado de protección de datos (DPO), sus datos de contacto, antes de publicar el sitio.</div>
 
-  <h2>2. ¿Qué cookies utiliza este sitio?</h2>
-  <p>Aplicamos un criterio de minimización: solo usamos lo imprescindible. Distinguimos dos categorías.</p>
+  <h2>2. ¿Qué datos tratamos y con qué finalidad?</h2>
+  <p>Tratamos únicamente los datos que nos facilitas voluntariamente a través de los formularios del Sitio (formulario de contacto y valoración de madurez IA) o por correo electrónico:</p>
   <table>
-    <thead><tr><th>Tipo</th><th>Finalidad</th><th>¿Requiere consentimiento?</th></tr></thead>
+    <thead><tr><th>Tratamiento</th><th>Datos</th><th>Finalidad</th></tr></thead>
     <tbody>
-      <tr><td><strong>Técnicas / esenciales</strong></td><td>Permiten el funcionamiento básico del sitio y recordar tu elección sobre cookies (por ejemplo, el valor <em>stoa_cookie_consent</em> guardado en tu navegador).</td><td>No. Están exentas por ser estrictamente necesarias.</td></tr>
-      <tr><td><strong>Analíticas (opcionales)</strong></td><td>Nos ayudan a entender de forma agregada y anónima cómo se usa el sitio para mejorarlo. Solo se activan si las aceptas.</td><td>Sí. Solo se instalan con tu consentimiento expreso.</td></tr>
+      <tr><td>Formulario de contacto</td><td>Nombre, empresa, cargo, sector, email y mensaje</td><td>Atender tu consulta y mantener el contacto comercial que solicitas.</td></tr>
+      <tr><td>Valoración de madurez IA</td><td>Respuestas al cuestionario, nombre, empresa, cargo, sector, tamaño y email</td><td>Elaborar y enviarte tu mapa de madurez IA y preparar, en su caso, una Stoa Call.</td></tr>
+      <tr><td>Agendamiento (Stoa Call)</td><td>Datos facilitados en la herramienta de agenda</td><td>Gestionar la reserva de la videollamada.</td></tr>
     </tbody>
   </table>
-  <div class="callout"><strong>Aviso al editor:</strong> si finalmente instalas una herramienta de analítica (Google Analytics, Plausible, Matomo, etc.), añade aquí una tabla con el nombre concreto de cada cookie, su proveedor, finalidad y plazo de conservación. Si usas una herramienta sin cookies y respetuosa con la privacidad (como Plausible), indícalo.</div>
+  <p>No recabamos categorías especiales de datos (art. 9 RGPD) ni elaboramos perfiles con efectos jurídicos automatizados.</p>
 
-  <h2>3. Cookies de terceros</h2>
-  <p>Algunas funciones se apoyan en servicios externos que pueden instalar sus propias cookies cuando interactúas con ellos; por ejemplo, la herramienta de agendamiento de la Stoa Call (Cal.com) o los reproductores y enlaces a redes sociales. Estas cookies se rigen por las políticas de privacidad y cookies de cada proveedor.</p>
+  <h2>3. Legitimación</h2>
+  <p>La base jurídica del tratamiento es tu <strong>consentimiento</strong> (art. 6.1.a RGPD), que prestas al enviar los formularios marcando la casilla correspondiente, y el <strong>interés legítimo</strong> de Stoa Consulting en responder a las solicitudes que nos diriges (art. 6.1.f RGPD). Puedes retirar tu consentimiento en cualquier momento.</p>
 
-  <h2>4. ¿Cómo gestionar tu consentimiento?</h2>
-  <p>La primera vez que visitas el sitio te mostramos un aviso donde puedes <strong>aceptar</strong> todas las cookies o usar <strong>solo las esenciales</strong>. Tu elección se guarda en tu navegador. Puedes cambiarla en cualquier momento borrando los datos de navegación de este sitio, lo que hará que el aviso vuelva a aparecer.</p>
+  <h2>4. Conservación de los datos</h2>
+  <p>Conservamos tus datos durante el tiempo necesario para atender tu solicitud y, posteriormente, durante el plazo de prescripción de las eventuales responsabilidades legales. Si no llegamos a iniciar una relación profesional, suprimiremos tus datos cuando dejen de ser necesarios para la finalidad que los motivó, salvo que nos autorices a mantenerlos para futuras comunicaciones.</p>
 
-  <h2>5. Cómo desactivar las cookies desde tu navegador</h2>
-  <p>Además, puedes configurar o bloquear las cookies directamente desde tu navegador. Aquí tienes las guías oficiales:</p>
+  <h2>5. Destinatarios y encargados del tratamiento</h2>
+  <p>No cedemos tus datos a terceros, salvo obligación legal. Para prestar el servicio nos apoyamos en proveedores tecnológicos que actúan como encargados del tratamiento (por ejemplo, servicios de hosting, correo, hojas de cálculo y agendamiento). Estos proveedores tratan los datos siguiendo nuestras instrucciones y con las garantías exigidas por el RGPD.</p>
+  <p>Algunos proveedores pueden estar ubicados fuera del Espacio Económico Europeo. En tal caso, las transferencias internacionales se realizan con las garantías adecuadas previstas en el RGPD (cláusulas contractuales tipo o decisiones de adecuación).</p>
+  <div class="callout"><strong>Aviso al editor:</strong> enumera aquí los proveedores reales que uses (p. ej. Google Workspace / Google Apps Script y Sheets, Vercel o Netlify, Cal.com) cuando estén confirmados, para máxima transparencia.</div>
+
+  <h2>6. Tus derechos</h2>
+  <p>Como titular de los datos, puedes ejercer en cualquier momento los siguientes derechos:</p>
   <ul>
-    <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
-    <li><a href="https://support.mozilla.org/es/kb/Borrar%20cookies" target="_blank" rel="noopener">Mozilla Firefox</a></li>
-    <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
-    <li><a href="https://support.microsoft.com/es-es/microsoft-edge" target="_blank" rel="noopener">Microsoft Edge</a></li>
+    <li><strong>Acceso:</strong> saber qué datos tuyos tratamos.</li>
+    <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
+    <li><strong>Supresión:</strong> solicitar que eliminemos tus datos.</li>
+    <li><strong>Oposición:</strong> oponerte a un tratamiento concreto.</li>
+    <li><strong>Limitación:</strong> pedir que restrinjamos el tratamiento en ciertos casos.</li>
+    <li><strong>Portabilidad:</strong> recibir tus datos en un formato estructurado y de uso común.</li>
+    <li><strong>Retirada del consentimiento:</strong> sin que ello afecte a la licitud del tratamiento previo.</li>
   </ul>
-  <p>Ten en cuenta que desactivar las cookies técnicas puede afectar al correcto funcionamiento de algunas partes del sitio.</p>
+  <p>Para ejercerlos, escríbenos a <a href="mailto:hello@stoa.consulting">hello@stoa.consulting</a> indicando el derecho que deseas ejercer. Responderemos en el plazo legalmente establecido.</p>
 
-  <h2>6. Más información</h2>
-  <p>Para conocer cómo tratamos tus datos personales, consulta nuestra <a href="privacidad.html">Política de Privacidad</a>. Si tienes dudas sobre esta política de cookies, escríbenos a <a href="mailto:hello@stoa.consulting">hello@stoa.consulting</a>.</p>
+  <h2>7. Reclamación ante la autoridad de control</h2>
+  <p>Si consideras que el tratamiento de tus datos no se ajusta a la normativa, tienes derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos</strong> (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
 
-  <h2>7. Cambios en esta política</h2>
-  <p>Podremos actualizar esta política de cookies cuando cambien las cookies que utilizamos o la normativa aplicable. La versión vigente será siempre la publicada en esta página.</p>
+  <h2>8. Seguridad</h2>
+  <p>Aplicamos las medidas técnicas y organizativas adecuadas para proteger tus datos frente a la pérdida, el uso indebido o el acceso no autorizado, de acuerdo con el estado de la técnica y la naturaleza de los datos tratados.</p>
+
+  <h2>9. Cookies</h2>
+  <p>El Sitio utiliza cookies en los términos descritos en nuestra <a href="cookies.html">Política de Cookies</a>.</p>
+
+  <h2>10. Cambios en esta política</h2>
+  <p>Podremos actualizar esta política para adaptarla a cambios normativos o de nuestra actividad. La versión vigente será siempre la publicada en esta página, con su fecha de actualización.</p>
 
   <div style="margin-top:48px;">
     <a href="index.html" class="btn btn-ghost">← Volver al inicio</a>
@@ -129,7 +151,7 @@
     </div>
     <div class="footer-col">
       <span class="eyebrow">Navegar</span>
-      <a href="programas.html">Formación</a>
+      <a href="index.html#departamentos">Formación</a>
       <a href="index.html#departamentos">Frentes de formación</a>
       <a href="index.html#valoracion">Valoración</a>
       <a href="https://cal.com/stoa-consulting/stoa-call" target="_blank" rel="noopener">Stoa Call</a>

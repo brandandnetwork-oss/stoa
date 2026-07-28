@@ -1,0 +1,63 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Stoa Consulting//IA para Comites de Direccion//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Stoa · IA para Comités de Dirección (Ed. III)
+BEGIN:VEVENT
+UID:stoa-iacomites-ed3-s1@stoa.consulting
+DTSTAMP:20260728T160000Z
+DTSTART;TZID=Europe/Madrid:20261001T183000
+DTEND;TZID=Europe/Madrid:20261001T203000
+SUMMARY:Stoa · Sesión 1 · Calibración
+DESCRIPTION:IA para Comités de Dirección · Edición III. El enlace de acceso al aula se envía el 28 de septiembre.
+LOCATION:Online en directo
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Stoa · Sesión 1 en una hora
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stoa-iacomites-ed3-s2@stoa.consulting
+DTSTAMP:20260728T160000Z
+DTSTART;TZID=Europe/Madrid:20261008T183000
+DTEND;TZID=Europe/Madrid:20261008T203000
+SUMMARY:Stoa · Sesión 2 · Mapa de casos de uso
+DESCRIPTION:IA para Comités de Dirección · Edición III. El enlace de acceso al aula se envía el 28 de septiembre.
+LOCATION:Online en directo
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Stoa · Sesión 2 en una hora
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stoa-iacomites-ed3-s3@stoa.consulting
+DTSTAMP:20260728T160000Z
+DTSTART;TZID=Europe/Madrid:20261015T183000
+DTEND;TZID=Europe/Madrid:20261015T203000
+SUMMARY:Stoa · Sesión 3 · Gobierno y riesgo · AI Act
+DESCRIPTION:IA para Comités de Dirección · Edición III. El enlace de acceso al aula se envía el 28 de septiembre.
+LOCATION:Online en directo
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Stoa · Sesión 3 en una hora
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stoa-iacomites-ed3-s4@stoa.consulting
+DTSTAMP:20260728T160000Z
+DTSTART;TZID=Europe/Madrid:20261022T183000
+DTEND;TZID=Europe/Madrid:20261022T203000
+SUMMARY:Stoa · Sesión 4 · Taller práctico y Plan Año 1
+DESCRIPTION:IA para Comités de Dirección · Edición III. El enlace de acceso al aula se envía el 28 de septiembre.
+LOCATION:Online en directo
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Stoa · Sesión 4 en una hora
+END:VALARM
+END:VEVENT
+END:VCALENDAR
