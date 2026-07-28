@@ -4,3 +4,7 @@ Thumbs.db
 *.log
 *.tmp
 *.psd
+
+# basura del montaje de red y descartes de trabajo
+.fuse_hidden*
+assets/escenas/_revisar/
