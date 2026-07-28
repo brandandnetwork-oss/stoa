@@ -698,7 +698,7 @@
 .salida em{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--azul-profundo)}
 
 /* Banda fotográfica intermedia */
-.banda{position:relative;height:300px;background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:28px 32px;margin:48px 0}
+.banda{position:relative;height:clamp(360px,32vw,470px);background-size:cover;background-position:center 20%;display:flex;align-items:flex-end;padding:32px 36px;margin:48px 0}
 .banda::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,58,.18),rgba(8,24,58,.74))}
 .banda .fil{position:absolute;top:20px;right:26px;color:var(--bronze-light);font-size:16px;opacity:.9}
 .banda p{position:relative;font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.4vw,30px);color:var(--blanco);max-width:26ch;line-height:1.2;margin:0}
