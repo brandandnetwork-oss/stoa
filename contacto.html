@@ -257,8 +257,11 @@
   var form = document.getElementById('contact-form');
   var success = document.getElementById('form-success');
   var errorNote = document.getElementById('error-note');
-  // En producción: sustituir por la URL del Google Apps Script (ver WEB_STOA_APPS_SCRIPT.js)
-  var ENDPOINT = '';
+  // Backend: workflow n8n "Stoa · Contacto web → Aviso + HubSpot" (id y9me8aXoSKpozoZO)
+  var ENDPOINT = 'https://brandandnetwork.app.n8n.cloud/webhook/stoa-contacto';
+  // Etiqueta el lead con el programa de origen (contacto.html?programa=ia-comites-oct26)
+  var PROGRAMA = '';
+  try { PROGRAMA = new URLSearchParams(window.location.search).get('programa') || ''; } catch (e) { PROGRAMA = ''; }
 
   function showError(msg) {
     errorNote.textContent = msg;
@@ -283,18 +286,18 @@
       nombre: nombre, empresa: empresa,
       rol: document.getElementById('rol').value,
       sector: document.getElementById('sector').value,
-      email: email, mensaje: mensaje
+      email: email, mensaje: mensaje,
+      programa: PROGRAMA
     };
 
     function done() { form.style.display = 'none'; success.classList.add('show'); success.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
 
     if (ENDPOINT) {
-      fetch(ENDPOINT, { method: 'POST', mode: 'no-cors', body: JSON.stringify(payload) })
+      fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
         .then(done).catch(function () { showError('No se pudo enviar. Escríbenos a hello@stoa.consulting.'); });
     } else {
-      // Sin backend configurado: registramos y mostramos confirmación.
-      console.log('Stoa · contacto', payload);
-      done();
+      // Sin backend configurado NUNCA damos por enviado el mensaje.
+      showError('El formulario no está disponible ahora mismo. Escríbenos a hello@stoa.consulting y te contestamos hoy.');
     }
   });
 })();
