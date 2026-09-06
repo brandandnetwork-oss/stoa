@@ -1,0 +1,26 @@
+name: Deploy a Hostinger
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configurar SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p 65002 212.85.28.136 >> ~/.ssh/known_hosts
+
+      - name: Desplegar por rsync
+        run: |
+          rsync -avz \
+            --exclude='.git' --exclude='.github' --exclude='.gitignore' \
+            -e "ssh -p 65002 -i ~/.ssh/id_ed25519" \
+            ./ u281049504@212.85.28.136:domains/stoa.consulting/public_html/
