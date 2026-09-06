@@ -59,6 +59,18 @@ body{font-family:var(--sans);color:var(--antracita);font-size:15px;line-height:1
 @media(max-width:1000px){.hub-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:560px){.hub-grid{grid-template-columns:repeat(2,1fr)}.hub{padding:28px 6% 32px}}
 
+/* ── CARRUSEL DE LOGOS ── */
+.logos{background:var(--blanco);padding:clamp(40px,7vw,72px) 0;overflow:hidden;border-bottom:1px solid var(--gris-claro)}
+.logos-titulo{font-family:var(--sans);font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:600;color:var(--gris-medio);margin:0 0 32px;text-align:center}
+.logos-viewport{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent)}
+.logos-cinta{display:flex;align-items:center;gap:clamp(40px,6vw,80px);width:max-content;margin:0;padding:0;list-style:none;animation:logos-desplazar var(--duracion,40s) linear infinite;will-change:transform}
+@keyframes logos-desplazar{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+.logos-viewport:hover .logos-cinta{animation-play-state:paused}
+.logos-item{flex:none;display:flex;align-items:center}
+.logos-item img{display:block;height:clamp(28px,4vw,40px);width:auto;object-fit:contain;filter:grayscale(1);opacity:.55;transition:filter .2s,opacity .2s}
+.logos-item img:hover{filter:none;opacity:1}
+.logos-item .logo-texto{font-family:var(--serif);font-size:clamp(17px,2.2vw,22px);font-weight:500;color:var(--gris-medio);letter-spacing:.5px;white-space:nowrap}
+
 /* ── SECCIÓN DEPARTAMENTO ── */
 main{padding:0 8% 80px}
 .dept{display:none;padding-top:40px}
@@ -129,13 +141,14 @@ main{padding:0 8% 80px}
       </div>
     </div>
     <a href="#valoracion" class="nav-link">Valoración</a>
+    <a href="fundae.html" class="nav-link">FUNDAE</a>
     <a href="casos.html" class="nav-link">Casos</a>
     <a href="contacto.html" class="nav-link">Contacto</a>
     <a href="https://www.jmantelo.es" class="nav-link nav-me" target="_blank" rel="noopener" title="Jose Manuel Antelo - jmantelo.es">ME</a>
   </nav>
   <div class="header-right">
     <span class="lang">ES</span>
-    <a href="https://cal.com/stoa-consulting-1e59mq/30min" class="header-cta" target="_blank" rel="noopener">Stoa Call →</a>
+    <a href="https://wa.me/34625034042?text=Hello%20STOA%20quiero%20m%C3%A1s%20informaci%C3%B3n" class="header-cta" target="_blank" rel="noopener">WhatsApp →</a>
     <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -146,6 +159,7 @@ main{padding:0 8% 80px}
   <button class="drawer-close" aria-label="Cerrar menú">&times;</button>
   <a href="programas.html">Formación</a>
   <a href="#valoracion">Valoración</a>
+  <a href="fundae.html">FUNDAE</a>
   <a href="casos.html">Casos</a>
   <a href="contacto.html">Contacto</a>
   <a href="https://www.jmantelo.es" target="_blank" rel="noopener" title="Jose Manuel Antelo - jmantelo.es">ME</a>
@@ -171,6 +185,14 @@ main{padding:0 8% 80px}
 <section class="hub" id="departamentos">
   <div class="hub-title">Elige tu departamento</div>
   <div class="hub-grid" id="hub"></div>
+</section>
+
+<!-- ===== CARRUSEL DE LOGOS (CSS puro, sin JS) ===== -->
+<section class="logos" aria-labelledby="logos-titulo">
+  <h2 id="logos-titulo" class="logos-titulo">Empresas que ya trabajan con nosotros</h2>
+  <div class="logos-viewport">
+    <ul class="logos-cinta" id="logos-cinta" style="--duracion:40s"></ul>
+  </div>
 </section>
 
 <main id="main"></main>
@@ -1020,8 +1042,9 @@ showStep(1);
       <a href="programa-ia-comites.html">IA para Comités</a>
       <a href="#departamentos">Frentes de formación</a>
       <a href="#valoracion">Valoración</a>
-      <a href="https://cal.com/stoa-consulting-1e59mq/30min" target="_blank" rel="noopener">Stoa Call</a>
+      <a href="https://wa.me/34625034042?text=Hello%20STOA%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener">WhatsApp</a>
       <a href="casos.html">Casos</a>
+      <a href="fundae.html">FUNDAE</a>
       <a href="contacto.html">Contacto</a>
     </div>
     <div class="footer-col">
@@ -1036,9 +1059,9 @@ showStep(1);
     <div class="footer-col">
       <span class="eyebrow">Contacto</span>
       <div class="footer-contact-line">General · <a href="mailto:hello@stoa.consulting">hello@stoa.consulting</a></div>
-      <div class="footer-contact-line">Directo · <a href="mailto:antelo@stoa.consulting">antelo@stoa.consulting</a></div>
-      <div class="footer-contact-line">Marketing · <a href="mailto:jorge@stoa.consulting">jorge@stoa.consulting</a></div>
-      <div class="footer-contact-line">Stoa Call · <a href="https://cal.com/stoa-consulting-1e59mq/30min" target="_blank" rel="noopener">cal.com/stoa-consulting</a></div>
+      <div class="footer-contact-line">Departamento de Ventas · <a href="mailto:jorge@stoa.consulting">jorge@stoa.consulting</a></div>
+      <div class="footer-contact-line">Departamento Learning · <a href="mailto:antelo@stoa.consulting">antelo@stoa.consulting</a></div>
+      <div class="footer-contact-line">WhatsApp · <a href="https://wa.me/34625034042?text=Hello%20STOA%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener">+34 625 034 042</a></div>
       <div class="footer-sep"></div>
       <span class="eyebrow">Síguenos</span>
       <div class="footer-social">
@@ -1239,7 +1262,7 @@ DATA.forEach((d,i)=>{
     <div class="dept-cta">
       <a class="btn-ghost" href="#departamentos">← Elegir otro departamento</a>
       <a class="btn-primary" href="#valoracion">Valorar mi madurez →</a>
-      <a class="btn-ghost" href="https://cal.com/stoa-consulting-1e59mq/30min" target="_blank" rel="noopener">Reservar Stoa Call</a>
+      <a class="btn-ghost" href="https://wa.me/34625034042?text=Hello%20STOA%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
     </div>
     <p class="nota">Los tiempos son órdenes de magnitud observados en despliegues reales; cada organización calibra los suyos durante el programa. Todos los trabajos incluyen revisión humana y se implantan dentro del marco de gobierno IA definido con el Comité.</p>
   `;
@@ -1254,6 +1277,24 @@ function show(i){
 
 document.querySelectorAll('.door')[0].classList.add('active');
 document.querySelectorAll('.dept')[0].classList.add('visible');
+
+/* ── Carrusel de logos: cinta duplicada para bucle sin costura ── */
+const LOGOS = [
+  {nombre:'Adeslas', src:'assets/logos/adeslas.svg'}
+];
+const cinta = document.getElementById('logos-cinta');
+let serie = [];
+while (serie.length < 8) serie = serie.concat(LOGOS);
+[...serie, ...serie].forEach((l,i)=>{
+  const li = document.createElement('li');
+  li.className='logos-item';
+  if(i >= serie.length) li.setAttribute('aria-hidden','true');
+  const img = document.createElement('img');
+  img.src = l.src; img.alt = l.nombre; img.loading = 'lazy';
+  img.onerror = () => { const s=document.createElement('span'); s.className='logo-texto'; s.textContent=l.nombre; img.replaceWith(s); };
+  li.appendChild(img);
+  cinta.appendChild(li);
+});
 </script>
 </div>
 </body>
