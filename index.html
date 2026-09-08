@@ -189,10 +189,11 @@ main{padding:0 8% 80px}
 
 <!-- ===== CARRUSEL DE LOGOS (CSS puro, sin JS) ===== -->
 <section class="logos" aria-labelledby="logos-titulo">
-  <h2 id="logos-titulo" class="logos-titulo">Empresas que ya trabajan con nosotros</h2>
+  <h2 id="logos-titulo" class="logos-titulo">Empresas que necesitan de nuestros servicios</h2>
   <div class="logos-viewport">
-    <ul class="logos-cinta" id="logos-cinta" style="--duracion:40s"></ul>
+    <ul class="logos-cinta" id="logos-cinta" style="--duracion:56s"></ul>
   </div>
+  <p style="text-align:center;font-size:11px;color:var(--gris-medio);margin:20px 24px 0;">Selección de empresas del IBEX 35 a cuyo perfil dirigimos nuestra formación. No implica relación comercial.</p>
 </section>
 
 <main id="main"></main>
@@ -1280,7 +1281,18 @@ document.querySelectorAll('.dept')[0].classList.add('visible');
 
 /* ── Carrusel de logos: cinta duplicada para bucle sin costura ── */
 const LOGOS = [
-  {nombre:'Adeslas', src:'assets/logos/adeslas.svg'}
+  {nombre:'Inditex', src:'assets/logos/inditex.svg'},
+  {nombre:'Ferrovial', src:'assets/logos/ferrovial.svg'},
+  {nombre:'Aena', src:'assets/logos/aena.svg'},
+  {nombre:'ACS', src:'assets/logos/acs.svg'},
+  {nombre:'IAG', src:'assets/logos/iag.svg'},
+  {nombre:'Amadeus', src:'assets/logos/amadeus.svg'},
+  {nombre:'Mapfre', src:'assets/logos/mapfre.svg'},
+  {nombre:'Indra', src:'assets/logos/indra.svg'},
+  {nombre:'Puig', src:'assets/logos/puig.svg'},
+  {nombre:'Grifols', src:'assets/logos/grifols.svg'},
+  {nombre:'Fluidra', src:'assets/logos/fluidra.svg'},
+  {nombre:'Logista', src:'assets/logos/logista.svg'}
 ];
 const cinta = document.getElementById('logos-cinta');
 let serie = [];
