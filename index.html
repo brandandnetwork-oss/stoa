@@ -132,12 +132,12 @@ main{padding:0 8% 80px}
     <div class="nav-item">
       <a href="#departamentos" class="nav-link">Frentes</a>
       <div class="nav-dropdown">
-        <a href="#departamentos">Dirección</a>
-        <a href="#departamentos">RRHH</a>
-        <a href="#departamentos">Marketing</a>
-        <a href="#departamentos">Ventas</a>
-        <a href="#departamentos">Financiero</a>
-        <a href="#departamentos">Tecnología</a>
+        <a href="#dept-direccion">Dirección</a>
+        <a href="#dept-rrhh">RRHH</a>
+        <a href="#dept-marketing">Marketing</a>
+        <a href="#dept-ventas">Ventas</a>
+        <a href="#dept-finanzas">Financiero</a>
+        <a href="#dept-tecnologia">Tecnología</a>
       </div>
     </div>
     <a href="#valoracion" class="nav-link">Valoración</a>
@@ -164,12 +164,12 @@ main{padding:0 8% 80px}
   <a href="contacto.html">Contacto</a>
   <a href="https://www.jmantelo.es" target="_blank" rel="noopener" title="Jose Manuel Antelo - jmantelo.es">ME</a>
   <div class="drawer-section">Frentes de formación</div>
-  <a href="#departamentos">Dirección</a>
-  <a href="#departamentos">RRHH</a>
-  <a href="#departamentos">Marketing</a>
-  <a href="#departamentos">Ventas</a>
-  <a href="#departamentos">Financiero</a>
-  <a href="#departamentos">Tecnología</a>
+  <a href="#dept-direccion">Dirección</a>
+  <a href="#dept-rrhh">RRHH</a>
+  <a href="#dept-marketing">Marketing</a>
+  <a href="#dept-ventas">Ventas</a>
+  <a href="#dept-finanzas">Financiero</a>
+  <a href="#dept-tecnologia">Tecnología</a>
   <a href="https://cal.com/stoa-consulting-1e59mq/30min" class="drawer-cta" target="_blank" rel="noopener">Agendar Stoa Call →</a>
 </aside>
 
@@ -1050,12 +1050,12 @@ showStep(1);
     </div>
     <div class="footer-col">
       <span class="eyebrow">Frentes de formación</span>
-      <a href="#departamentos">Dirección</a>
-      <a href="#departamentos">RRHH</a>
-      <a href="#departamentos">Marketing</a>
-      <a href="#departamentos">Ventas</a>
-      <a href="#departamentos">Financiero</a>
-      <a href="#departamentos">Tecnología</a>
+      <a href="#dept-direccion">Dirección</a>
+      <a href="#dept-rrhh">RRHH</a>
+      <a href="#dept-marketing">Marketing</a>
+      <a href="#dept-ventas">Ventas</a>
+      <a href="#dept-finanzas">Financiero</a>
+      <a href="#dept-tecnologia">Tecnología</a>
     </div>
     <div class="footer-col">
       <span class="eyebrow">Contacto</span>
@@ -1101,7 +1101,7 @@ showStep(1);
 <script>
 const DATA = [
 {
- num:"01", nombre:"Dirección General", accent:"y Comité", img:"assets/escenas/04_despacho.webp",
+ num:"01", slug:"direccion", nombre:"Dirección General", accent:"y Comité", img:"assets/escenas/04_despacho.webp",
  intro:"El Comité no necesita usar diez herramientas. Necesita que la información le llegue destilada y que cada decisión se prepare en horas, no en semanas.",
  trabajos:[
   {t:"Tendencias IA en su sector",q:"Radar periódico con fuentes verificables: qué está haciendo la competencia con IA, qué casos funcionan en el sector y qué viene en regulación.",e:"Informe mensual de 3 páginas: movimientos de competidores, casos con retorno probado y novedades AI Act.",h:"Claude con búsqueda web",tm:"De 1 día de analista a 1 h",d:"facil"},
@@ -1114,7 +1114,7 @@ const DATA = [
  ]
 },
 {
- num:"02", nombre:"Finanzas", accent:"y Contabilidad", img:"assets/escenas/06_finanzas.webp",
+ num:"02", slug:"finanzas", nombre:"Finanzas", accent:"y Contabilidad", img:"assets/escenas/06_finanzas.webp",
  intro:"El departamento con más trabajo repetitivo de la casa es también donde la IA da resultados más medibles: cuadres, cierres y reporting.",
  trabajos:[
   {t:"Administración con IA",q:"El trabajo administrativo del día a día acelerado: facturas procesadas, cuadres automáticos y conciliación bancaria asistida.",e:"Las 400 facturas del mes digitadas y clasificadas; el equipo solo revisa excepciones.",h:"Document AI + Copilot en Excel",tm:"De horas diarias a minutos",d:"media"},
@@ -1125,7 +1125,7 @@ const DATA = [
  ]
 },
 {
- num:"03", nombre:"Marketing", accent:"y Comunicación", img:"assets/escenas/06_marketing.webp",
+ num:"03", slug:"marketing", nombre:"Marketing", accent:"y Comunicación", img:"assets/escenas/06_marketing.webp",
  intro:"Donde antes hacía falta agencia, estudio o productora, ahora el equipo produce directamente. La IA no da las ideas: ejecuta a velocidad de idea.",
  trabajos:[
   {t:"Análisis de mercado, competencia, precios, canales y clientes",q:"Informes con fuentes verificables: tendencias de mercado, movimientos de competidores, comparativa de precios, rendimiento por canal de venta y segmentación de clientes.",e:"El análisis de competencia y precios que costaba una semana de trabajo, listo en una mañana.",h:"Claude con búsqueda web + datos propios",tm:"De semanas a horas",d:"facil"},
@@ -1137,7 +1137,7 @@ const DATA = [
  ]
 },
 {
- num:"04", nombre:"Ventas", accent:"/ Comercial", img:"assets/escenas/06_ventas.webp",
+ num:"04", slug:"ventas", nombre:"Ventas", accent:"/ Comercial", img:"assets/escenas/06_ventas.webp",
  intro:"El comercial no necesita más horas: necesita llegar a cada visita sabiendo más que nadie y no perder tardes escribiendo propuestas y correos.",
  trabajos:[
   {t:"Mejorar la prospección e investigación de clientes con IA",q:"Identificación de cuentas objetivo y dossier de cada cliente: quién es, últimas noticias, cifras y ángulos de conversación.",e:"Visita a las 10:00; a las 9:45 el comercial lee el dossier completo generado en el móvil.",h:"Claude con búsqueda web + CRM",tm:"De 1 h de búsqueda a 5 min por cuenta",d:"facil"},
@@ -1149,7 +1149,7 @@ const DATA = [
  ]
 },
 {
- num:"05", nombre:"Recursos", accent:"Humanos", img:"assets/escenas/06_rrhh.webp",
+ num:"05", slug:"rrhh", nombre:"Recursos", accent:"Humanos", img:"assets/escenas/06_rrhh.webp",
  intro:"RRHH gana en dos frentes: se quita encima el trabajo administrativo y por primera vez puede analizar en serio lo que la plantilla dice y necesita.",
  trabajos:[
   {t:"Planificación de plantillas y necesidades de personal con IA",q:"Dimensionamiento de plantilla sobre datos: cargas de trabajo, rotación prevista y necesidades por área para los próximos meses.",e:"El plan de plantilla del año con escenarios: «¿y si crecemos un 20% en el canal online?».",h:"Claude / Copilot en Excel + datos RRHH",tm:"De estimaciones a plan con datos",d:"media"},
@@ -1161,7 +1161,7 @@ const DATA = [
  ]
 },
 {
- num:"06", nombre:"Operaciones", accent:"", img:"assets/escenas/06_operaciones.webp",
+ num:"06", slug:"operaciones", nombre:"Operaciones", accent:"", img:"assets/escenas/06_operaciones.webp",
  intro:"El conocimiento operativo suele vivir en la cabeza de tres personas. La IA lo documenta, lo automatiza y lo hace consultable por todos.",
  trabajos:[
   {t:"Documentar procesos que nadie escribía",q:"Grabas a alguien explicando el proceso; obtienes el manual con pasos, excepciones y responsables.",e:"El proceso de devoluciones «que solo sabe Marta», convertido en SOP en 1 h.",h:"Transcripción + Claude",tm:"De conocimiento tribal a manual en horas",d:"facil"},
@@ -1173,7 +1173,7 @@ const DATA = [
  ]
 },
 {
- num:"07", nombre:"Tecnología", accent:"/ IT", img:"assets/escenas/06_industria.webp",
+ num:"07", slug:"tecnologia", nombre:"Tecnología", accent:"/ IT", img:"assets/escenas/06_industria.webp",
  intro:"IT es a la vez el mayor beneficiario y el habilitador del resto. Empezar por aquí genera los primeros números que convencen al Comité.",
  trabajos:[
   {t:"Analizar mejor el mercado con IA",q:"Análisis de la competencia, de precios, de los canales de venta y de los clientes, con fuentes verificables.",e:"El benchmark tecnológico de la competencia — stack, productos y precios — actualizado cada mes.",h:"Claude con búsqueda web",tm:"De semanas a horas",d:"facil"},
@@ -1185,7 +1185,7 @@ const DATA = [
  ]
 },
 {
- num:"08", nombre:"Legal", accent:"y Compliance", img:"assets/escenas/06_legal.webp",
+ num:"08", slug:"legal", nombre:"Legal", accent:"y Compliance", img:"assets/escenas/06_legal.webp",
  intro:"Leer mucho y rápido sin perder rigor: exactamente el trabajo donde la IA bien gobernada rinde más. Siempre con revisión del letrado.",
  trabajos:[
   {t:"Revisión de contratos contra tu playbook",q:"Cláusulas fuera de tu estándar marcadas, con propuesta de redline y nivel de riesgo.",e:"El contrato de 60 páginas del proveedor: 7 cláusulas señaladas con alternativa propuesta.",h:"Claude / herramienta legal IA",tm:"De 3 h a 30 min por contrato",d:"media"},
@@ -1197,7 +1197,7 @@ const DATA = [
  ]
 },
 {
- num:"09", nombre:"Atención", accent:"al Cliente", img:"assets/escenas/03_recepcion.webp",
+ num:"09", slug:"atencion-cliente", nombre:"Atención", accent:"al Cliente", img:"assets/escenas/03_recepcion.webp",
  intro:"No se trata de sustituir agentes por bots: se trata de que lo repetitivo se resuelva solo y los agentes lleguen a lo difícil con todo el contexto.",
  trabajos:[
   {t:"Asistente del agente en tiempo real",q:"Respuesta sugerida con los datos del cliente delante mientras el agente atiende.",e:"El agente ve historial, pedido y respuesta propuesta antes de terminar de leer la consulta.",h:"Copilot / plataforma de contact center",tm:"-30% de tiempo por consulta",d:"media"},
@@ -1209,7 +1209,7 @@ const DATA = [
  ]
 },
 {
- num:"10", nombre:"Compras", accent:"", img:"assets/escenas/02_hall.webp",
+ num:"10", slug:"compras", nombre:"Compras", accent:"", img:"assets/escenas/02_hall.webp",
  intro:"Compras negocia mejor cuando sabe más. La IA convierte el archivo de contratos y el histórico de gasto en ventaja negociadora.",
  trabajos:[
   {t:"Comparación de ofertas de proveedores",q:"Tabla comparativa homogénea con la letra pequeña de cada oferta destacada.",e:"Las 4 ofertas del concurso, comparadas partida a partida, con las exclusiones señaladas.",h:"Claude",tm:"De 1 día a 1 h",d:"facil"},
@@ -1237,6 +1237,7 @@ DATA.forEach((d,i)=>{
 
   const sec=document.createElement('section');
   sec.className='dept';
+  sec.id='dept-'+d.slug;
   sec.innerHTML=`
     <div class="dept-banner" style="background-image:url('${d.img}')">
       <span class="fil">◆</span>
@@ -1278,6 +1279,19 @@ function show(i){
 
 document.querySelectorAll('.door')[0].classList.add('active');
 document.querySelectorAll('.dept')[0].classList.add('visible');
+
+/* ── Enlaces directos a un departamento: #dept-<slug> (menú Frentes, drawer, footer) ── */
+function showFromHash(){
+  const m=(location.hash||'').match(/^#dept-([a-z-]+)$/);
+  if(!m) return false;
+  const i=DATA.findIndex(d=>d.slug===m[1]);
+  if(i<0) return false;
+  show(i);
+  return true;
+}
+window.addEventListener('hashchange',showFromHash);
+document.querySelectorAll('a[href*="#dept-"]').forEach(a=>a.addEventListener('click',()=>setTimeout(showFromHash,0)));
+if(showFromHash()){ setTimeout(showFromHash,250); }
 
 /* ── Carrusel de logos: cinta duplicada para bucle sin costura ── */
 const LOGOS = [
